@@ -1,9 +1,7 @@
 import React from 'react';
 import Header from './components/header';
-import './App.css';
 import {
 	presetPacks,
-	boxes,
 	soldiers,
 	rangers,
 	monsters,
@@ -11,6 +9,8 @@ import {
 	zords,
 	megazords,
 } from './characterLists';
+import { OptionsArea } from './components/optons';
+import styles from './app.module.scss';
 
 const lists = {
 	soldiers,
@@ -27,6 +27,7 @@ function App() {
 		presetPacks.filter((pack) => pack.id === 1)[0].boxes
 	);
 	const [pickedCards, updatePickedCards] = React.useState([]);
+	const [listView, changeView] = React.useState(true);
 
 	const pickRandom = (choices) => {
 		const random = choices[Math.floor(Math.random() * choices.length)];
@@ -34,7 +35,6 @@ function App() {
 	};
 
 	const drawRandomCard = (double = []) => {
-		console.log('fired', double);
 		if (lists[cardType] && lists[cardType].length) {
 			let availableList = lists[cardType]
 				.filter((card) => boxList.includes(card.box))
@@ -89,43 +89,43 @@ function App() {
 	};
 
 	return (
-		<div className='App'>
-			<Header cardType={cardType} updateCardType={updateCardType} />
-			<button onClick={() => drawRandomCard()}>Randomize</button>
-			<button onClick={clearList}>Clear List</button>
-			<div>
-				{pickedCards.map((card) => (
-					<p key={card.id}>
-						<strong>
-							{card.name} {card.power}
-						</strong>
-					</p>
-				))}
-			</div>
-			<div>
-				<button onClick={() => updateBoxes([])}>Clear all boxes</button>
-				{presetPacks.map((pack) => (
-					<label key={pack.id}>
-						<input
-							type='checkbox'
-							value={pack.boxes}
-							checked={boxList.sort().join(',') === pack.boxes.sort().join(',')}
-							onChange={() => updateBoxes(pack.boxes)}
+		<div className={styles.mainContainer}>
+			<Header
+				cardType={cardType}
+				updateCardType={updateCardType}
+				drawRandomCard={drawRandomCard}
+			/>
+			<div style={{ display: 'flex' }}>
+				<div className={styles.menuArea}>
+					<button
+						title='Options'
+						className={styles.optionsButton}
+						onClick={() => changeView(!listView)}
+					/>
+					<button
+						title='Clear List'
+						className={styles.clearButton}
+						onClick={clearList}
+					/>
+					<button title='Info' className={styles.infoButton} />
+				</div>
+				<div className={styles.listArea}>
+					{listView ? (
+						pickedCards.map((card) => (
+							<p key={card.id}>
+								<strong>
+									{card.name} {card.power}
+								</strong>
+							</p>
+						))
+					) : (
+						<OptionsArea
+							boxList={boxList}
+							updateBoxes={updateBoxes}
+							handleBoxChange={handleBoxChange}
 						/>
-						{pack.name}
-					</label>
-				))}
-				{boxes.map((box) => (
-					<label key={box.id}>
-						<input
-							type='checkbox'
-							value={box.id}
-							checked={boxList.includes(box.id)}
-							onChange={handleBoxChange}
-						/>
-						{box.name}
-					</label>
-				))}
+					)}
+				</div>
 			</div>
 		</div>
 	);

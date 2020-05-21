@@ -1,0 +1,26 @@
+.headerContainer {
+	width: 100%;
+	text-align: center;
+	button {
+		height: 75px;
+		width: 75px;
+		background-repeat: no-repeat;
+		margin: 35px;
+		background-color: transparent;
+		border: 3px solid rgb(75, 71, 71);
+		box-shadow: 0 0 10px silver;
+		outline: none;
+		border-radius: 50%;
+		background-position: center;
+		&:hover {
+			cursor: pointer;
+			box-shadow: 0 0 25px rgb(228, 214, 214);
+		}
+	}
+	.draw {
+		background-image: url('../images/lightning3.jpg');
+		height: 115px;
+		width: 115px;
+	}
+}
+// have non-selected card types grayscale
