@@ -6,6 +6,94 @@
 		margin-bottom: 15px;
 	}
 	label {
-		display: block;
+		display: flex;
+		&:hover {
+			cursor: pointer;
+		}
+		* {
+			&:hover {
+				cursor: pointer;
+			}
+		}
+		span {
+			margin-top: 5px;
+		}
+	}
+	button {
+		display: inline-block;
+		padding: 6px 12px;
+		margin-bottom: 0;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1.42857143;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: middle;
+		touch-action: manipulation;
+		cursor: pointer;
+		user-select: none;
+		background-image: none;
+		border: 1px solid transparent;
+		border-radius: 4px;
+		font-weight: 700;
+		height: max-content;
+		max-width: max-content;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+
+		color: #fff;
+		background-color: #6c757d;
+		border-color: #6c757d;
+		&:hover {
+			color: #fff;
+			background-color: #5a6268;
+			border-color: #545b62;
+		}
+	}
+}
+
+.checkboxContainer {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 8px;
+	margin-top: 5px;
+	.hiddenInput {
+		border: 0;
+		clip: rect(0 0 0 0);
+		clippath: inset(50%);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: fixed;
+		white-space: nowrap;
+		width: 1px;
+	}
+	.styledCheckbox {
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		background: #cacaca;
+		border-radius: 3px;
+		border: 1px solid #444f5b;
+		transition: all 150ms;
+		// 	${HiddenInput}:focus + & {
+		// 		box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+		// 	}
+	}
+	.styledCheckbox.checked {
+		background: #444f5b;
+	}
+	.checkmark {
+		fill: none;
+		stroke: goldenrod;
+		stroke-width: 8px;
+		visibility: hidden;
+	}
+	.checkmark.checked {
+		visibility: visible;
 	}
 }

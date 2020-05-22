@@ -1,11 +1,14 @@
 .headerContainer {
 	width: 100%;
-	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	button {
 		height: 75px;
 		width: 75px;
 		background-repeat: no-repeat;
-		margin: 35px;
+		margin-left: 25px;
+		margin-right: 25px;
 		background-color: transparent;
 		border: 3px solid rgb(75, 71, 71);
 		box-shadow: 0 0 10px silver;
@@ -21,6 +24,52 @@
 		background-image: url('../images/lightning3.jpg');
 		height: 115px;
 		width: 115px;
+		margin-top: 50px;
+		@media screen and (max-width: 832px) {
+			order: 8;
+		}
+	}
+	.master {
+		background-image: url('../images/rita.jpg');
+	}
+	.monster {
+		background-image: url('../images/pudgy.jpg');
+	}
+	.soldier {
+		background-image: url('../images/putty.jpg');
+	}
+	.ranger {
+		background-image: url('../images/ranger.jpg');
+	}
+	.zord {
+		background-image: url('../images/zord.jpg');
+	}
+	.megazord {
+		background-image: url('../images/megazord.jpg');
+	}
+	.notActive {
+		-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+		filter: grayscale(100%);
 	}
 }
-// have non-selected card types grayscale
+
+.outside {
+	margin-top: 5px;
+	@media screen and (max-width: 832px) {
+		margin-top: 15px;
+	}
+}
+
+.middle {
+	margin-top: 20px;
+	@media screen and (max-width: 832px) {
+		margin-top: 15px;
+	}
+}
+
+.inside {
+	margin-top: 35px;
+	@media screen and (max-width: 832px) {
+		margin-top: 15px;
+	}
+}
