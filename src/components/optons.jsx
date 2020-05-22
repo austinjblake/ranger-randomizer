@@ -25,7 +25,7 @@ const Checkbox = ({ checked, inputboxes, updaterfunc }) => (
 
 export const OptionsArea = ({ boxList, updateBoxes, handleBoxChange }) => {
 	return (
-		<React.Fragment>
+		<div style={{ display: 'block' }}>
 			<h2>Choose your components</h2>
 			<div className={styles.presetContainer}>
 				<h3>Preset Packs</h3>
@@ -59,6 +59,6 @@ export const OptionsArea = ({ boxList, updateBoxes, handleBoxChange }) => {
 					</label>
 				))}
 			</div>
-		</React.Fragment>
+		</div>
 	);
 };
