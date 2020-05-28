@@ -118,16 +118,23 @@ export const rangers = [
 	{ id: 3, name: 'Adam Park', power: 'Zeo Ranger IV Green', box: 'F' },
 	{ id: 4, name: 'Rocky DeSantos', power: 'Zeo Ranger III Blue', box: 'F' },
 	{ id: 5, name: 'Tanya Sloan', power: 'Zeo Ranger II Yellow', box: 'F' },
-	{ id: 31, name: 'Kat Hillard', power: 'Zeo Ranger I Pink', box: 'F' },
-	{ id: 32, name: 'Jason Lee Scott', power: 'Gold Zeo Ranger', box: 'K' },
-	{ id: 33, name: 'Trey of Triforia', power: 'Gold Zeo Ranger', box: 'K' },
-]; // add allies pack
+	{ id: 34, name: 'Kat Hillard', power: 'Zeo Ranger I Pink', box: 'F' },
+	{ id: 35, name: 'Jason Lee Scott', power: 'Zeo Gold Ranger', box: 'K' },
+	{ id: 36, name: 'Trey of Triforia', power: 'Zeo Gold Ranger', box: 'K' },
+	{ id: 37, name: 'Jason Lee Scott', power: 'Zeo Gold Ranger', box: 'G' },
+	{ id: 38, name: 'Trey of Triforia', power: 'Zeo Gold Ranger', box: 'G' },
+	{ id: 39, name: '', power: 'Ninjor', box: 'G' },
+	{ id: 40, name: '', power: 'Phantom Ranger', box: 'G' },
+	{ id: 41, name: 'Mike Corbett', power: 'Magna Defender', box: 'G' },
+	{ id: 42, name: 'Anubis Cruger', power: 'S.P.D. Shadow Ranger', box: 'G' },
+];
 
 export const megazords = [
 	{ id: 9001, name: 'Dino Megazord', box: 'A' },
 	{ id: 9002, name: 'Chronos HyperForce Megazord', box: 'C' },
 	{ id: 9003, name: 'Zeo Megazord', box: 'F' },
 	{ id: 9004, name: 'Dragonzord Battle Mode', box: 'H' },
+	{ id: 9005, name: 'Delta Command Megazord', box: 'G' },
 ];
 
 export const zords = [
@@ -157,7 +164,13 @@ export const zords = [
 	{ id: 8024, name: 'Zeo Zord III', box: 'F' },
 	{ id: 8025, name: 'Zeo Zord II', box: 'F' },
 	{ id: 8026, name: 'Zeo Zord I', box: 'F' },
-	{ id: 8026, name: 'Red Zeo Battlezord', box: 'K' },
+	{ id: 8027, name: 'Zeo Red Battlezord', box: 'K' },
+	{ id: 8028, name: 'Pyramidas', box: 'K' },
+	{ id: 8029, name: 'Ninjor Battle Mode', box: 'G' },
+	{ id: 8030, name: 'Pyramidas', box: 'G' },
+	{ id: 8031, name: 'Artillatron', box: 'G' },
+	{ id: 8032, name: 'Torozord', box: 'G' },
+	{ id: 8033, name: 'Delta Base', box: 'G' },
 ];
 
 export const masters = [
