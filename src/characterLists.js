@@ -202,4 +202,5 @@ export const monsters = [
 	{ id: 2013, name: 'Evil Green Ranger', box: 'B' },
 	{ id: 2014, name: 'Finster', box: 'B' },
 	{ id: 2015, name: 'Primator', box: 'B' },
+	{ id: 2016, name: 'Evil Robot Tommy', box: 'H' },
 ];
