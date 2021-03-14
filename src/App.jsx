@@ -119,6 +119,9 @@ function App() {
 				updateCardType={updateCardType}
 				drawRandomCard={drawRandomCard}
 			/>
+			<div className={styles.stars}></div>
+			<div className={styles.stars2}></div>
+			<div className={styles.stars3}></div>
 			<div className={styles.bottomScreen}>
 				<div className={styles.menuArea}>
 					<button
