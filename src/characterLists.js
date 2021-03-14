@@ -2,7 +2,7 @@ export const presetPacks = [
 	{
 		id: 1,
 		name: 'Morphin Master (Everything so far)',
-		boxes: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K'],
+		boxes: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'],
 	},
 	{ id: 2, name: 'All In-Wave 1', boxes: ['A', 'B', 'C', 'D', 'I'] },
 	{ id: 3, name: 'All In-Wave 2', boxes: ['F', 'H', 'J', 'K'] },
@@ -23,6 +23,14 @@ export const boxes = [
 		name: 'Kickstarter Exclusives #2: Zeo Red Battlezord and Gold Zeo Ranger',
 		id: 'K',
 	},
+	{
+		name: 'Rise of the Psycho Rangers',
+		id: 'L',
+	},
+	{
+		name: 'Villian Pack #2',
+		id: 'M',
+	},
 ];
 
 export const soldiers = [
@@ -31,6 +39,7 @@ export const soldiers = [
 	{ id: 1003, name: 'Tenga Warriors', box: 'B', image: '' },
 	{ id: 1004, name: 'Z-Putties', box: 'B', image: '' },
 	{ id: 1005, name: 'Mastadon Troopers', box: 'C', image: '' },
+	{ id: 1006, name: 'Quantrons', box: 'L', image: '' },
 ];
 
 export const rangers = [
@@ -127,6 +136,11 @@ export const rangers = [
 	{ id: 40, name: '', power: 'Phantom Ranger', box: 'G' },
 	{ id: 41, name: 'Mike Corbett', power: 'Magna Defender', box: 'G' },
 	{ id: 42, name: 'Anubis Cruger', power: 'S.P.D. Shadow Ranger', box: 'G' },
+	{ id: 43, name: 'Andros', power: 'Red Space Ranger', box: 'L' },
+	{ id: 44, name: 'Carlos Vallerte', power: 'Black Space Ranger', box: 'L' },
+	{ id: 45, name: 'T.J. Johnson', power: 'Blue Space Ranger', box: 'L' },
+	{ id: 46, name: 'Ashley Hammond', power: 'Yellow Space Ranger', box: 'L' },
+	{ id: 47, name: 'Cassie Chan', power: 'Pink Space Ranger', box: 'L' },
 ];
 
 export const megazords = [
@@ -135,6 +149,7 @@ export const megazords = [
 	{ id: 9003, name: 'Zeo Megazord', box: 'F' },
 	{ id: 9004, name: 'Dragonzord Battle Mode', box: 'H' },
 	{ id: 9005, name: 'Delta Command Megazord', box: 'G' },
+	{ id: 9006, name: 'Mega Voyager', box: 'L' },
 ];
 
 export const zords = [
@@ -171,6 +186,11 @@ export const zords = [
 	{ id: 8031, name: 'Artillatron', box: 'G' },
 	{ id: 8032, name: 'Torozord', box: 'G' },
 	{ id: 8033, name: 'Delta Base', box: 'G' },
+	{ id: 8034, name: 'Mega V1', box: 'L' },
+	{ id: 8035, name: 'Mega V2', box: 'L' },
+	{ id: 8036, name: 'Mega V3', box: 'L' },
+	{ id: 8037, name: 'Mega V4', box: 'L' },
+	{ id: 8038, name: 'Mega V5', box: 'L' },
 ];
 
 export const masters = [
@@ -184,6 +204,9 @@ export const masters = [
 	{ id: 3008, name: 'Goldar', box: 'B' },
 	{ id: 3009, name: 'Lord Zedd', box: 'B' },
 	{ id: 3010, name: 'Wizard of Deception', box: 'B' },
+	{ id: 3011, name: 'Psycho Rangers', box: 'L' },
+	{ id: 3012, name: 'King Mondo', box: 'M' },
+	{ id: 3013, name: 'Louie Kaboom', box: 'M' },
 ];
 
 export const monsters = [
@@ -203,4 +226,14 @@ export const monsters = [
 	{ id: 2014, name: 'Finster', box: 'B' },
 	{ id: 2015, name: 'Primator', box: 'B' },
 	{ id: 2016, name: 'Evil Robot Tommy', box: 'H' },
+	{ id: 2017, name: 'Psycho Red', box: 'L' },
+	{ id: 2018, name: 'Psycho Black', box: 'L' },
+	{ id: 2019, name: 'Psycho Blue', box: 'L' },
+	{ id: 2020, name: 'Psycho Pink', box: 'L' },
+	{ id: 2021, name: 'Psycho Yellow', box: 'L' },
+	{ id: 2022, name: 'Psycho Green', box: 'L' },
+	{ id: 2023, name: 'Prince Gasket & Princess Archerina', box: 'M' },
+	{ id: 2024, name: 'Prince Gasket', box: 'M' },
+	{ id: 2025, name: 'Princess Archerina', box: 'M' },
+	{ id: 2026, name: 'General Venjix', box: 'M' },
 ];
