@@ -114,7 +114,7 @@ function App() {
 				updateCardType={updateCardType}
 				drawRandomCard={drawRandomCard}
 			/>
-			<div style={{ display: 'flex' }}>
+			<div className={styles.bottomScreen}>
 				<div className={styles.menuArea}>
 					<button
 						title='Options'
