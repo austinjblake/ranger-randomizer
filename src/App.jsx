@@ -15,6 +15,7 @@ import settingsIcon from './images/settings.png';
 import clearIcon from './images/deletered.png';
 import infoIcon from './images/info_black.png';
 import ReactGA from 'react-ga';
+import { useStateWithLocalStorage } from './hooks/useLocalStorage';
 
 function initializeReactGA() {
 	ReactGA.initialize('UA-29737798-2');
@@ -33,8 +34,12 @@ const lists = {
 };
 
 function App() {
-	const [cardType, updateCardType] = React.useState('monsters');
-	const [boxList, updateBoxes] = React.useState(
+	const [cardType, updateCardType] = useStateWithLocalStorage(
+		'cardType',
+		'monsters'
+	);
+	const [boxList, updateBoxes] = useStateWithLocalStorage(
+		'boxList',
 		presetPacks.filter((pack) => pack.id === 1)[0].boxes
 	);
 	const [pickedCards, updatePickedCards] = React.useState([]);
