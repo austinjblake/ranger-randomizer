@@ -42,6 +42,8 @@ function App() {
 		'boxList',
 		presetPacks.filter((pack) => pack.id === 1)[0].boxes
 	);
+	const [animate, setAnimate] = useStateWithLocalStorage('animate', 'true');
+
 	const [pickedCards, updatePickedCards] = React.useState([]);
 	const [listView, changeView] = React.useState('list');
 
@@ -113,7 +115,11 @@ function App() {
 	};
 
 	return (
-		<div className={styles.mainContainer}>
+		<div
+			className={`${styles.mainContainer} ${
+				animate === 'true' ? '' : styles.disableAnimation
+			}`}
+		>
 			<Header
 				cardType={cardType}
 				updateCardType={updateCardType}
@@ -156,6 +162,8 @@ function App() {
 							boxList={boxList}
 							updateBoxes={updateBoxes}
 							handleBoxChange={handleBoxChange}
+							animate={animate}
+							setAnimate={setAnimate}
 						/>
 					)}
 					{listView === 'info' && (

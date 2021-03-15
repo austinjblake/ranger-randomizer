@@ -23,9 +23,23 @@ const Checkbox = ({ checked, inputboxes, updaterfunc }) => (
 	</div>
 );
 
-export const OptionsArea = ({ boxList, updateBoxes, handleBoxChange }) => {
+export const OptionsArea = ({
+	boxList,
+	updateBoxes,
+	handleBoxChange,
+	animate,
+	setAnimate,
+}) => {
 	return (
 		<div style={{ display: 'block' }}>
+			<label>
+				<Checkbox
+					checked={animate === 'true'}
+					inputboxes={animate}
+					updaterfunc={() => setAnimate(animate === 'true' ? 'false' : 'true')}
+				/>
+				<span>Enable Animations</span>
+			</label>
 			<h2>Choose your components</h2>
 			<div className={styles.presetContainer}>
 				<h3>Preset Packs</h3>
