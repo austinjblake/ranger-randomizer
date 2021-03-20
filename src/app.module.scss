@@ -163,3 +163,11 @@ $shadows-big: multiple-box-shadow(100);
 		animation: none;
 	}
 }
+
+.mainContainer {
+	@media (prefers-reduced-motion) {
+		* {
+			animation: none;
+		}
+	}
+}
