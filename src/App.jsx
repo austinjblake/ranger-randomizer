@@ -120,9 +120,11 @@ function App() {
 				animate === 'true' ? '' : styles.disableAnimation
 			}`}
 		>
-			<div className={styles.stars}></div>
-			<div className={styles.stars2}></div>
-			<div className={styles.stars3}></div>
+			<div className={styles.starContainer}>
+				<div className={styles.stars}></div>
+				<div className={styles.stars2}></div>
+				<div className={styles.stars3}></div>
+			</div>
 			<Header
 				cardType={cardType}
 				updateCardType={updateCardType}

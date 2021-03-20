@@ -81,7 +81,9 @@
 $shadows-small: multiple-box-shadow(900);
 $shadows-medium: multiple-box-shadow(200);
 $shadows-big: multiple-box-shadow(100);
-
+.starContainer {
+	position: fixed;
+}
 .stars {
 	will-change: transform;
 	width: 1px;
