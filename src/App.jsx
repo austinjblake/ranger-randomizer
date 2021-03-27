@@ -14,15 +14,7 @@ import styles from './app.module.scss';
 import settingsIcon from './images/settings.png';
 import clearIcon from './images/deletered.png';
 import infoIcon from './images/info_black.png';
-import ReactGA from 'react-ga';
 import { useStateWithLocalStorage } from './hooks/useLocalStorage';
-
-function initializeReactGA() {
-	ReactGA.initialize('UA-29737798-2');
-	ReactGA.pageview('/homepage');
-}
-
-initializeReactGA();
 
 const lists = {
 	soldiers,
