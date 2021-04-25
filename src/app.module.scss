@@ -54,17 +54,20 @@
 		}
 	}
 }
-.listArea {
+.contentArea {
 	flex-grow: 1;
 	margin: 15px 0px;
 	padding: 20px 5px;
-	display: flex;
-	flex-wrap: wrap;
-	align-content: flex-start;
 	width: 900px;
 	max-width: 100vw;
 	align-self: center;
 	overflow: auto;
+}
+
+.cardArea {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
 }
 
 .drawnCard {

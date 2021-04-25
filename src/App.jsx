@@ -122,15 +122,17 @@ function App() {
 				updateCardType={updateCardType}
 				drawRandomCard={drawRandomCard}
 			/>
-			<div className={styles.listArea}>
-				{listView === 'list' &&
-					pickedCards.map((card) => (
-						<span key={card.id} className={styles.drawnCard}>
-							<strong>
-								{card.name} {card.power} {card.subset}
-							</strong>
-						</span>
-					))}
+			<div className={styles.contentArea}>
+				<div className={styles.cardArea}>
+					{listView === 'list' &&
+						pickedCards.map((card) => (
+							<span key={card.id} className={styles.drawnCard}>
+								<strong>
+									{card.name} {card.power} {card.subset}
+								</strong>
+							</span>
+						))}
+				</div>
 				{listView === 'options' && (
 					<OptionsArea
 						boxList={boxList}
