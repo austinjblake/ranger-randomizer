@@ -2,7 +2,25 @@ export const presetPacks = [
 	{
 		id: 1,
 		name: 'Morphin Master (Everything so far)',
-		boxes: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'],
+		boxes: [
+			'A',
+			'B',
+			'C',
+			'D',
+			'E',
+			'F',
+			'G',
+			'H',
+			'I',
+			'J',
+			'K',
+			'L',
+			'M',
+			'N',
+			'O',
+			'P',
+			'Q',
+		],
 	},
 	{ id: 2, name: 'All In-Wave 1', boxes: ['A', 'B', 'C', 'D', 'I'] },
 	{ id: 3, name: 'All In-Wave 2', boxes: ['F', 'H', 'J', 'K'] },
@@ -28,8 +46,24 @@ export const boxes = [
 		id: 'L',
 	},
 	{
-		name: 'Villian Pack #2',
+		name: 'Villain Pack #2',
 		id: 'M',
+	},
+	{
+		name: 'Legendary Rangers: Forever Rangers',
+		id: 'N',
+	},
+	{
+		name: 'Fan Appreciation Pack: Titanus and Ultrazord',
+		id: 'O',
+	},
+	{
+		name: 'Squatt and Baboo Character Pack',
+		id: 'P',
+	},
+	{
+		name: 'Villain Pack #3',
+		id: 'Q',
 	},
 ];
 
@@ -141,6 +175,11 @@ export const rangers = [
 	{ id: 45, name: 'T.J. Johnson', power: 'Blue Space Ranger', box: 'L' },
 	{ id: 46, name: 'Ashley Hammond', power: 'Yellow Space Ranger', box: 'L' },
 	{ id: 47, name: 'Cassie Chan', power: 'Pink Space Ranger', box: 'L' },
+	{ id: 48, name: 'Rocky DeSantos', power: 'Mighty Morphin Red', box: 'N' },
+	{ id: 49, name: 'Adam Park', power: 'Mighty Morphin Black', box: 'N' },
+	{ id: 50, name: 'Kat Hillard', power: 'Mighty Morphin Pink', box: 'N' },
+	{ id: 51, name: 'Aisha Campbell', power: 'Mighty Morphin Yellow', box: 'N' },
+	{ id: 52, name: 'Alpha 5', power: 'Servant of Zordon', box: 'N' },
 ];
 
 export const megazords = [
@@ -150,6 +189,9 @@ export const megazords = [
 	{ id: 9004, name: 'Dragonzord Battle Mode', box: 'H' },
 	{ id: 9005, name: 'Delta Command Megazord', box: 'G' },
 	{ id: 9006, name: 'Mega Voyager', box: 'L' },
+	{ id: 9007, name: 'Mega Tigerzord', box: 'N' },
+	{ id: 9008, name: 'Thunder Megazord', box: 'N' },
+	{ id: 9009, name: 'Ultrazord', box: 'O' },
 ];
 
 export const zords = [
@@ -191,6 +233,13 @@ export const zords = [
 	{ id: 8036, name: 'Mega V3', box: 'L' },
 	{ id: 8037, name: 'Mega V4', box: 'L' },
 	{ id: 8038, name: 'Mega V5', box: 'L' },
+	{ id: 8039, name: 'Red Dragon Thunderzord', box: 'N' },
+	{ id: 8040, name: 'Lion Thunderzord', box: 'N' },
+	{ id: 8041, name: 'Firebird Thunderzord', box: 'N' },
+	{ id: 8042, name: 'Unicorn Thunderzord', box: 'N' },
+	{ id: 8043, name: 'Griffin Thunderzord', box: 'N' },
+	{ id: 8044, name: 'Power Blaster', box: 'N' },
+	{ id: 8045, name: 'Titanus', box: 'O' },
 ];
 
 export const masters = [
@@ -207,6 +256,8 @@ export const masters = [
 	{ id: 3011, name: 'Psycho Rangers', box: 'L' },
 	{ id: 3012, name: 'King Mondo', box: 'M' },
 	{ id: 3013, name: 'Louie Kaboom', box: 'M' },
+	{ id: 3014, name: 'Divatox', box: 'Q' },
+	{ id: 3015, name: 'Thrax', box: 'Q' },
 ];
 
 export const monsters = [
@@ -236,4 +287,10 @@ export const monsters = [
 	{ id: 2024, name: 'Prince Gasket', box: 'M' },
 	{ id: 2025, name: 'Princess Archerina', box: 'M' },
 	{ id: 2026, name: 'General Venjix', box: 'M' },
+	{ id: 2027, name: 'Squatt', box: 'P' },
+	{ id: 2028, name: 'Squatt & Baboo', box: 'P' },
+	{ id: 2029, name: 'Baboo', box: 'P' },
+	{ id: 2030, name: 'Pirantishead', box: 'Q' },
+	{ id: 2031, name: 'King Sphinx', box: 'Q' },
+	{ id: 2032, name: 'Terror Toad', box: 'Q' },
 ];
