@@ -142,35 +142,6 @@ function App() {
 						setAnimate={setAnimate}
 					/>
 				)}
-				{listView === 'info' && (
-					<div>
-						<h1>Ranger Randomizer</h1>
-						<h2>About</h2>
-						<p>
-							This unofficial app will help you randomly choose components to
-							use for playing Power Rangers Heroes of the Grid.
-						</p>
-						<p>
-							No affiliation or ownership is implied and all trademarks and
-							intellectual property rights belong to Renegade Games, Hasbro, and
-							all other trademark holders
-						</p>
-						<h2>How to Use</h2>
-						<p>
-							Select what card type you would like to randomly draw by selecting
-							the icon at the top of the screen. You can choose from Masters,
-							Monsters, Foot Soldiers, Rangers, Zords, and Megazords. Then click
-							the lightning bolt to begin drawing random cards of that type!
-						</p>
-						<p>
-							You can also change which Heroes of the Grid expansion boxes are
-							used to select cards from by clicking the settings button in the
-							menu on the left. Choose one of the preset packs or customize
-							which boxes you want to include by checking and unchecking
-							expansions.
-						</p>
-					</div>
-				)}
 			</div>
 			<div className={styles.menuArea}>
 				<button
@@ -181,14 +152,9 @@ function App() {
 				>
 					<img src={settingsIcon} alt='Settings' />
 				</button>
+				<button className={styles.draw} onClick={() => drawRandomCard()} />
 				<button title='Clear List' onClick={clearList}>
 					<img src={clearIcon} alt='Clear List' />
-				</button>
-				<button
-					title='Info'
-					onClick={() => changeView(listView === 'info' ? 'list' : 'info')}
-				>
-					<img src={infoIcon} alt='About' />
 				</button>
 			</div>
 		</div>

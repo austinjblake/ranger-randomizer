@@ -5,38 +5,37 @@ const Header = ({ cardType, updateCardType, drawRandomCard }) => {
 	return (
 		<header className={styles.headerContainer}>
 			<button
-				className={`${styles.outside} ${styles.master} ${
+				className={`${styles.master} ${
 					cardType === 'masters' ? '' : styles.notActive
 				}`}
 				onClick={() => updateCardType('masters')}
 			/>
 			<button
-				className={`${styles.middle} ${styles.monster} ${
+				className={`${styles.monster} ${
 					cardType === 'monsters' ? '' : styles.notActive
 				}`}
 				onClick={() => updateCardType('monsters')}
 			/>
 			<button
-				className={`${styles.inside} ${styles.soldier} ${
+				className={`${styles.soldier} ${
 					cardType === 'soldiers' ? '' : styles.notActive
 				}`}
 				onClick={() => updateCardType('soldiers')}
 			/>
-			<button className={styles.draw} onClick={() => drawRandomCard()} />
 			<button
-				className={`${styles.inside} ${styles.ranger} ${
+				className={`${styles.ranger} ${
 					cardType === 'rangers' ? '' : styles.notActive
 				}`}
 				onClick={() => updateCardType('rangers')}
 			/>
 			<button
-				className={`${styles.middle} ${styles.zord} ${
+				className={`${styles.zord} ${
 					cardType === 'zords' ? '' : styles.notActive
 				}`}
 				onClick={() => updateCardType('zords')}
 			/>
 			<button
-				className={`${styles.outside} ${styles.megazord} ${
+				className={`${styles.megazord} ${
 					cardType === 'megazords' ? '' : styles.notActive
 				}`}
 				onClick={() => updateCardType('megazords')}

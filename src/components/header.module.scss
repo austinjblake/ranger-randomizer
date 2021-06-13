@@ -1,9 +1,13 @@
 .headerContainer {
 	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	display: block;
+	text-align: center;
+	white-space: nowrap;
+	background: rgba(70, 68, 68, 0.788);
+	padding: 15px 0px;
+	overflow-x: auto;
 	button {
+		flex-shrink: 0;
 		height: 75px;
 		width: 75px;
 		background-repeat: no-repeat;
@@ -50,26 +54,5 @@
 	.notActive {
 		-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
 		filter: grayscale(100%);
-	}
-}
-
-.outside {
-	margin-top: 5px;
-	@media screen and (max-width: 832px) {
-		margin-top: 15px;
-	}
-}
-
-.middle {
-	margin-top: 20px;
-	@media screen and (max-width: 832px) {
-		margin-top: 15px;
-	}
-}
-
-.inside {
-	margin-top: 35px;
-	@media screen and (max-width: 832px) {
-		margin-top: 15px;
 	}
 }
