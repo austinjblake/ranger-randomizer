@@ -6,6 +6,7 @@
 	background: rgba(70, 68, 68, 0.788);
 	padding: 15px 0px;
 	overflow-x: auto;
+	flex-shrink: 0;
 	button {
 		flex-shrink: 0;
 		height: 75px;
@@ -22,15 +23,6 @@
 		&:hover {
 			cursor: pointer;
 			box-shadow: 0 0 25px rgb(228, 214, 214);
-		}
-	}
-	.draw {
-		background-image: url('../images/lightning3.jpg');
-		height: 115px;
-		width: 115px;
-		margin-top: 50px;
-		@media screen and (max-width: 832px) {
-			order: 8;
 		}
 	}
 	.master {
