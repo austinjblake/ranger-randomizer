@@ -13,7 +13,6 @@ import { OptionsArea } from './components/optons';
 import styles from './app.module.scss';
 import settingsIcon from './images/settings.png';
 import clearIcon from './images/deletered.png';
-import infoIcon from './images/info_black.png';
 import { useStateWithLocalStorage } from './hooks/useLocalStorage';
 
 const lists = {
