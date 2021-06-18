@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Header from './components/header';
 import {
 	presetPacks,
@@ -37,6 +37,8 @@ function App() {
 
 	const [pickedCards, updatePickedCards] = React.useState([]);
 	const [listView, changeView] = React.useState('list');
+
+	const currentCard = useRef();
 
 	const pickRandom = (choices) => {
 		const random = choices[Math.floor(Math.random() * choices.length)];
@@ -88,6 +90,12 @@ function App() {
 		}
 	};
 
+	useEffect(() => {
+		if (pickedCards.length && currentCard && currentCard.current) {
+			currentCard.current.scrollIntoView(false);
+		}
+	}, [pickedCards.length]);
+
 	const clearList = () => {
 		if (listView !== 'list') {
 			changeView('list');
@@ -124,8 +132,12 @@ function App() {
 			<div className={styles.contentArea}>
 				<div className={styles.cardArea}>
 					{listView === 'list' &&
-						pickedCards.map((card) => (
-							<span key={card.id} className={styles.drawnCard}>
+						pickedCards.map((card, i) => (
+							<span
+								key={card.id}
+								className={styles.drawnCard}
+								ref={i === pickedCards.length - 1 ? currentCard : null}
+							>
 								<strong>
 									{card.name} {card.power} {card.subset}
 								</strong>
