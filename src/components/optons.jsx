@@ -31,7 +31,7 @@ export const OptionsArea = ({
 	setAnimate,
 }) => {
 	return (
-		<div style={{ display: 'block' }}>
+		<div className={styles.presetContainer}>
 			<label>
 				<Checkbox
 					checked={animate === 'true'}

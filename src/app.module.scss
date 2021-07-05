@@ -5,7 +5,7 @@
 	min-height: 100%;
 	max-height: 100%;
 	* {
-		color: white;
+		color: #eae2e2;
 		z-index: 2;
 	}
 	overflow: hidden;
@@ -71,9 +71,9 @@
 }
 
 @function multiple-box-shadow($n) {
-	$value: '#{random(2000)}px #{random(2000)}px #FFF';
+	$value: '#{random(2000)}px #{random(2000)}px hsla(60, 100%, 95%, 0.7)';
 	@for $i from 2 through $n {
-		$value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF';
+		$value: '#{$value} , #{random(2000)}px #{random(2000)}px hsla(60, 100%, 95%, 0.7)';
 	}
 	@return unquote($value);
 }
