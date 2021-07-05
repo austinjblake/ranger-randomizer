@@ -113,6 +113,10 @@ function App() {
 		}
 	};
 
+	const selectAllBoxes = (fullList) => {
+		updateBoxes(fullList.map((box) => box.id));
+	};
+
 	return (
 		<div
 			className={`${styles.mainContainer} ${
@@ -151,6 +155,7 @@ function App() {
 						handleBoxChange={handleBoxChange}
 						animate={animate}
 						setAnimate={setAnimate}
+						selectAllBoxes={selectAllBoxes}
 					/>
 				)}
 			</div>

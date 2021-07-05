@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { boxes, presetPacks } from '../characterLists';
+import { boxes } from '../characterLists';
 import styles from './options.module.scss';
 
 const Checkbox = ({ checked, inputboxes, updaterfunc }) => (
@@ -29,38 +29,25 @@ export const OptionsArea = ({
 	handleBoxChange,
 	animate,
 	setAnimate,
+	selectAllBoxes,
 }) => {
+	const allChecked = boxList.length === boxes.length;
+
+	const toggleAll = () => {
+		if (!allChecked) {
+			selectAllBoxes(boxes);
+		} else {
+			updateBoxes([]);
+		}
+	};
+
 	return (
 		<div className={styles.presetContainer}>
-			<label>
-				<Checkbox
-					checked={animate === 'true'}
-					inputboxes={animate}
-					updaterfunc={() => setAnimate(animate === 'true' ? 'false' : 'true')}
-				/>
-				<span>Enable Animations</span>
-			</label>
 			<h2>Choose your components</h2>
-			<div className={styles.presetContainer}>
-				<h3>Preset Packs</h3>
-				<div style={{ display: 'flex', flexWrap: 'wrap' }}>
-					{presetPacks.map((pack) => (
-						<label key={pack.id}>
-							<Checkbox
-								checked={
-									boxList.sort().join(',') === pack.boxes.sort().join(',')
-								}
-								inputboxes={pack.boxes}
-								updaterfunc={() => updateBoxes(pack.boxes)}
-							/>
-							<span>{pack.name}</span>
-						</label>
-					))}
-					<br />
-				</div>
-				<button onClick={() => updateBoxes([])}>Clear all boxes</button>
-			</div>
-			<div className={styles.presetContainer}>
+			<button onClick={toggleAll}>
+				{allChecked ? 'Clear' : 'Check'} all boxes
+			</button>
+			<div>
 				<h3>Boxes</h3>
 				{boxes.map((box) => (
 					<label key={box.id}>
@@ -73,6 +60,15 @@ export const OptionsArea = ({
 					</label>
 				))}
 			</div>
+			<hr />
+			<label>
+				<Checkbox
+					checked={animate === 'true'}
+					inputboxes={animate}
+					updaterfunc={() => setAnimate(animate === 'true' ? 'false' : 'true')}
+				/>
+				<span>Enable Animations</span>
+			</label>
 			<div>
 				<h1>Ranger Randomizer</h1>
 				<h2>About</h2>
