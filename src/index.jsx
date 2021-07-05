@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import './fonts/Orbitron-ExtraBold.ttf';
-import './fonts/Orbitron-SemiBold.ttf';
 // import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(

@@ -1,19 +1,8 @@
-@font-face {
-	font-family: 'Orbitron';
-	src: local('Orbitron'), url(./fonts/Orbitron-SemiBold.ttf) format('truetype');
-}
-
 body {
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-family: Orbitron;
-}
-
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-		monospace;
-	font-family: Orbitron;
+	font-family: 'Orbitron', sans-serif;
 }
 
 html,
