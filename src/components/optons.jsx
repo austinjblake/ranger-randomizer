@@ -30,6 +30,10 @@ export const OptionsArea = ({
 	animate,
 	setAnimate,
 	selectAllBoxes,
+	multiplePowers,
+	multipleRangers,
+	setMultiplePowers,
+	setMultipleRangers,
 }) => {
 	const allChecked = boxList.length === boxes.length;
 
@@ -61,6 +65,32 @@ export const OptionsArea = ({
 				))}
 			</div>
 			<hr />
+			<label>
+				<Checkbox
+					checked={multiplePowers === 'true'}
+					inputboxes={multiplePowers}
+					updaterfunc={() =>
+						setMultiplePowers(multiplePowers === 'true' ? 'false' : 'true')
+					}
+				/>
+				<span>
+					Allow Multiples with the same Power Set (Ex: Adam Park and Zak Taylor
+					both MMPR Black)
+				</span>
+			</label>
+			<label>
+				<Checkbox
+					checked={multipleRangers === 'true'}
+					inputboxes={multipleRangers}
+					updaterfunc={() =>
+						setMultipleRangers(multipleRangers === 'true' ? 'false' : 'true')
+					}
+				/>
+				<span>
+					Allow Multiples of the same Ranger (Ex: Tommy Oliver MMPR White and
+					Tommy Oliver Turbo Red)
+				</span>
+			</label>
 			<label>
 				<Checkbox
 					checked={animate === 'true'}

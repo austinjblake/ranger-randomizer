@@ -35,6 +35,14 @@ function App() {
 		presetPacks.filter((pack) => pack.id === 1)[0].boxes
 	);
 	const [animate, setAnimate] = useStateWithLocalStorage('animate', 'true');
+	const [multiplePowers, setMultiplePowers] = useStateWithLocalStorage(
+		'multiplePowers',
+		'false'
+	);
+	const [multipleRangers, setMultipleRangers] = useStateWithLocalStorage(
+		'multipleRangers',
+		'true'
+	);
 
 	const [pickedCards, updatePickedCards] = React.useState([]);
 	const [listView, changeView] = React.useState('list');
@@ -68,7 +76,10 @@ function App() {
 			// insert double checks here
 			if (
 				cardType === 'rangers' &&
-				pickedCards.some((ranger) => ranger.power === newCard.power)
+				((multiplePowers === 'false' &&
+					pickedCards.some((ranger) => ranger.power === newCard.power)) ||
+					(multipleRangers === 'false' &&
+						pickedCards.some((ranger) => ranger.name === newCard.name)))
 			) {
 				console.log('double detected');
 				double.push(newCard.id);
@@ -157,6 +168,10 @@ function App() {
 						animate={animate}
 						setAnimate={setAnimate}
 						selectAllBoxes={selectAllBoxes}
+						multiplePowers={multiplePowers}
+						multipleRangers={multipleRangers}
+						setMultiplePowers={setMultiplePowers}
+						setMultipleRangers={setMultipleRangers}
 					/>
 				)}
 			</div>
