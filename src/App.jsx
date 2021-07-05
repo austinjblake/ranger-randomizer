@@ -14,6 +14,7 @@ import styles from './app.module.scss';
 import settingsIcon from './images/settings.png';
 import clearIcon from './images/deletered.png';
 import { useStateWithLocalStorage } from './hooks/useLocalStorage';
+import boltIcon from './images/bolt.png';
 
 const lists = {
 	soldiers,
@@ -168,7 +169,9 @@ function App() {
 				>
 					<img src={settingsIcon} alt='Settings' />
 				</button>
-				<button className={styles.draw} onClick={() => drawRandomCard()} />
+				<button className={styles.draw} onClick={() => drawRandomCard()}>
+					<img src={boltIcon} alt='Draw Card' />
+				</button>
 				<button title='Clear List' onClick={clearList}>
 					<img src={clearIcon} alt='Clear List' />
 				</button>
