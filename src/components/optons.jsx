@@ -74,7 +74,7 @@ export const OptionsArea = ({
 					}
 				/>
 				<span>
-					Allow Multiples with the same Power Set (Ex: Adam Park and Zak Taylor
+					Allow Multiples with the same Power Set (Ex: Adam Park and Zack Taylor
 					both MMPR Black)
 				</span>
 			</label>
