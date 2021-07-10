@@ -11,7 +11,6 @@ import {
 } from './characterLists';
 import { OptionsArea } from './components/optons';
 import styles from './app.module.scss';
-import settingsIcon from './images/settings.png';
 import clearIcon from './images/deletered.png';
 import { useStateWithLocalStorage } from './hooks/useLocalStorage';
 import boltIcon from './images/bolt.png';
@@ -181,11 +180,24 @@ function App() {
 					onClick={() =>
 						changeView(listView === 'options' ? 'list' : 'options')
 					}
+					className={styles.alpha}
 				>
-					<img src={settingsIcon} alt='Settings' />
+					<div className={styles.head}>
+						<div className={styles.ball} />
+						<div className={styles.middle}>
+							<div className={styles.eyes}>
+								<div className={`${styles.laser} ${styles.left}`} />
+								<div className={`${styles.laser} ${styles.right}`} />
+							</div>
+						</div>
+					</div>
 				</button>
 				<div className={styles.content}>
-					<button className={styles.draw} onClick={() => drawRandomCard()}>
+					<button
+						className={styles.draw}
+						onClick={() => drawRandomCard()}
+						title='Draw Card'
+					>
 						<img src={boltIcon} alt='Draw Card' />
 					</button>
 					<div className={styles.frame}>
