@@ -182,8 +182,16 @@ $shadows-big: multiple-box-shadow(100);
 }
 
 .disableAnimation {
-	* {
-		animation: none;
+	*,
+	:before,
+	:after {
+		animation: none !important;
+	}
+	.clr:before {
+		transform: rotate(130deg);
+	}
+	.clr {
+		transform: rotate(80deg);
 	}
 }
 
