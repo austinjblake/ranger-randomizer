@@ -184,12 +184,12 @@ function App() {
 				>
 					<img src={settingsIcon} alt='Settings' />
 				</button>
-				<div class={styles.content}>
+				<div className={styles.content}>
 					<button className={styles.draw} onClick={() => drawRandomCard()}>
 						<img src={boltIcon} alt='Draw Card' />
 					</button>
-					<div class={styles.frame}>
-						<div class={styles.clr}></div>
+					<div className={styles.frame}>
+						<div className={styles.clr}></div>
 					</div>
 				</div>
 				<button title='Clear List' onClick={clearList}>
