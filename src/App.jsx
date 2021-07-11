@@ -11,7 +11,6 @@ import {
 } from './characterLists';
 import { OptionsArea } from './components/optons';
 import styles from './app.module.scss';
-import clearIcon from './images/deletered.png';
 import { useStateWithLocalStorage } from './hooks/useLocalStorage';
 import boltIcon from './images/bolt.png';
 
@@ -204,8 +203,18 @@ function App() {
 						<div className={styles.clr}></div>
 					</div>
 				</div>
-				<button title='Clear List' onClick={clearList}>
-					<img src={clearIcon} alt='Clear List' />
+				<button
+					className={styles.clearButton}
+					title='Clear List'
+					onClick={clearList}
+				>
+					<div className={styles.dumpsterContainer}>
+						<div className={styles.innerDumpster} />
+						<div className={styles.lid}>
+							<div className={styles.gem} />
+						</div>
+						<div className={styles.dumpster}></div>
+					</div>
 				</button>
 			</div>
 		</div>
