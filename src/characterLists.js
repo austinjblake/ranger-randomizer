@@ -129,6 +129,22 @@ export const boxes = [
 		name: 'Zord Pack #3',
 		id: 'AG',
 	},
+	{
+		name: 'Arsenal Pack',
+		id: 'AH',
+	},
+	{
+		name: 'RPM',
+		id: 'AI',
+	},
+	{
+		name: 'Allies Pack #4',
+		id: 'AJ',
+	},
+	{
+		name: 'Foot Soldier Promo Pack #1',
+		id: 'AK',
+	},
 ];
 
 export const soldiers = [
@@ -144,6 +160,7 @@ export const soldiers = [
 	{ id: 1010, name: 'Cyclobots', box: 'AC', image: '' },
 	{ id: 1011, name: 'Tyrannodrones', box: 'AD', image: '' },
 	{ id: 1012, name: 'Krybots', box: 'AD', image: '' },
+	{ id: 1013, name: 'Ranger Sentries', box: 'AK', image: '' },
 ];
 
 export const rangers = [
@@ -290,6 +307,22 @@ export const rangers = [
 	{ id: 90, name: 'Nate Silva', power: 'Beast Morphers Gold', box: 'AA' },
 	{ id: 91, name: 'Steel Silva', power: 'Beast Morphers Silver', box: 'AA' },
 	{ id: 92, name: '', power: 'Santa Claus', box: 'AB' },
+	{ id: 93, name: 'Scott Truman', power: 'RPM Red', box: 'AI' },
+	{ id: 94, name: 'Flynn McAllistair', power: 'RPM Blue', box: 'AI' },
+	{ id: 95, name: 'Summer Landsdown', power: 'RPM Yellow', box: 'AI' },
+	{ id: 96, name: 'Ziggy Grover', power: 'RPM Green', box: 'AI' },
+	{ id: 97, name: 'Dillon', power: 'RPM Black', box: 'AI' },
+	{ id: 98, name: '', power: 'Blue Senturion', box: 'AJ' },
+	{ id: 99, name: 'Hunter Bradley', power: 'Crimson Thunder', box: 'AJ' },
+	{ id: 100, name: 'Blake Bradley', power: 'Navy Thunder', box: 'AJ' },
+	{ id: 101, name: 'Orion', power: 'Super Megaforce Silver', box: 'AJ' },
+	{ id: 102, name: 'Levi Weston', power: 'Ninja Steel Gold', box: 'AJ' },
+	{ id: 103, name: 'Nameless Warrior', power: 'Magna Defender', box: 'AJ' },
+	{ id: 104, name: 'Morphinaut', power: 'Phantom Ranger', box: 'AJ' },
+	{ id: 105, name: 'Matthew Cook', power: 'Mighty Morphin Green', box: 'AJ' },
+	{ id: 106, name: 'Tyler NaVarro', power: 'Dino Charge Red', box: 'AH' },
+	{ id: 107, name: 'Trini Kwan', power: 'Dragon Armor', box: 'AH' },
+	{ id: 108, name: 'Izzy Garcia', power: 'Dino Fury Green', box: 'AH' },
 ];
 
 export const megazords = [
@@ -320,6 +353,10 @@ export const megazords = [
 	{ id: 9025, name: 'Shogun Ultrazord', box: 'AF' },
 	{ id: 9026, name: 'Zeo Mega Battlezord', box: 'AG' },
 	{ id: 9027, name: 'Super Zeo Megazord', box: 'AG' },
+	{ id: 9028, name: 'High Octane Megazord', box: 'AI' },
+	{ id: 9029, name: 'Valvemax Megazord', box: 'AI' },
+	{ id: 9030, name: 'Ninja Storm Thunder Megazord', box: 'AJ' },
+	{ id: 9031, name: 'Bull Rider Megazord', box: 'AJ' },
 ];
 
 export const zords = [
@@ -428,6 +465,19 @@ export const zords = [
 	{ id: 8103, name: 'Super Zeo Zord 4', box: 'AG' },
 	{ id: 8104, name: 'Super Zeo Zord 5', box: 'AG' },
 	{ id: 8105, name: 'Warrior Wheel', box: 'AG' },
+	{ id: 8106, name: 'Eagle Racer', box: 'AI' },
+	{ id: 8107, name: 'Lion Hauler', box: 'AI' },
+	{ id: 8108, name: 'Bear Crawler', box: 'AI' },
+	{ id: 8109, name: 'Tail Spinner', box: 'AI' },
+	{ id: 8110, name: 'Wolf Cruiser', box: 'AI' },
+	{ id: 8111, name: 'Robo Racer', box: 'AJ' },
+	{ id: 8112, name: 'Crimson Insectizord', box: 'AJ' },
+	{ id: 8113, name: 'Navy Beetlezord', box: 'AJ' },
+	{ id: 8114, name: 'Q-Rex Drill', box: 'AJ' },
+	{ id: 8115, name: 'Ninja Bull Zord & Robo Rider Zord', box: 'AJ' },
+	{ id: 8116, name: 'T-Rex Zord', box: 'AH' },
+	{ id: 8117, name: 'Tiger Claw Zord', box: 'AH' },
+	{ id: 8118, name: 'Mega Black Dragon', box: 'AH' },
 ];
 
 export const masters = [
@@ -503,4 +553,5 @@ export const monsters = [
 	{ id: 2046, name: 'Vrak', box: 'Z' },
 	{ id: 2047, name: 'Frax', box: 'Z' },
 	{ id: 2048, name: 'Heximas', box: 'AB' },
+	{ id: 2049, name: 'Void Knight', box: 'AH' },
 ];

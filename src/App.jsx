@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Header from './components/header';
 import {
 	presetPacks,
@@ -42,8 +42,8 @@ function App() {
 		'true'
 	);
 
-	const [pickedCards, updatePickedCards] = React.useState([]);
-	const [listView, changeView] = React.useState('list');
+	const [pickedCards, updatePickedCards] = useState([]);
+	const [listView, changeView] = useState('list');
 
 	const currentCard = useRef();
 
