@@ -1,0 +1,50 @@
+.headerContainer {
+	width: 100%;
+	display: block;
+	text-align: center;
+	white-space: nowrap;
+	background: rgba(70, 68, 68, 0.788);
+	padding: 15px 0px;
+	overflow-x: auto;
+	flex-shrink: 0;
+	button {
+		flex-shrink: 0;
+		height: 75px;
+		width: 75px;
+		background-repeat: no-repeat;
+		margin-left: 25px;
+		margin-right: 25px;
+		background-color: transparent;
+		border: 3px solid rgb(75, 71, 71);
+		box-shadow: 0 0 10px silver;
+		outline: none;
+		border-radius: 50%;
+		background-position: center;
+		&:hover {
+			cursor: pointer;
+			box-shadow: 0 0 25px rgb(228, 214, 214);
+		}
+	}
+	.master {
+		background-image: url('../images/rita.jpg');
+	}
+	.monster {
+		background-image: url('../images/pudgy.jpg');
+	}
+	.soldier {
+		background-image: url('../images/putty.jpg');
+	}
+	.ranger {
+		background-image: url('../images/ranger.jpg');
+	}
+	.zord {
+		background-image: url('../images/zord.jpg');
+	}
+	.megazord {
+		background-image: url('../images/megazord.jpg');
+	}
+	.notActive {
+		-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+		filter: grayscale(100%);
+	}
+}
