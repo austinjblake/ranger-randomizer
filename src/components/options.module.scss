@@ -38,15 +38,15 @@
 		font-weight: 700;
 		height: max-content;
 		max-width: max-content;
+		color: #fff;
+		background-color: #6c757d;
+		border-color: #6c757d;
 
 		&:hover,
 		&:focus {
 			text-decoration: underline;
 		}
 
-		color: #fff;
-		background-color: #6c757d;
-		border-color: #6c757d;
 		&:hover {
 			color: #fff;
 			background-color: #5a6268;
@@ -63,7 +63,7 @@
 	.hiddenInput {
 		border: 0;
 		clip: rect(0 0 0 0);
-		clippath: inset(50%);
+		clip-path: inset(50%);
 		height: 1px;
 		margin: -1px;
 		overflow: hidden;

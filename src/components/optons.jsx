@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { boxes } from '../characterLists';
 import styles from './options.module.scss';
 

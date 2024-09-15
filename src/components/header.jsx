@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import styles from './header.module.scss';
 
 const Header = ({ cardType, updateCardType }) => {
