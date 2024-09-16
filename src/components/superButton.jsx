@@ -2,7 +2,7 @@ import styles from './superButton.module.scss';
 
 const SuperButton = ({ onClick, icon }) => {
 	return (
-		<button onClick={onClick} className={styles.superButton}>
+		<button title='Draw Card' onClick={onClick} className={styles.superButton}>
 			<span className={styles.shadow}></span>
 			<span className={styles.edge}></span>
 			<span className={styles.front}>
