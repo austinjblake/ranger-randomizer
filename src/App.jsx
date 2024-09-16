@@ -21,6 +21,7 @@ const lists = {
 	zords,
 	megazords,
 	masters,
+	nemesis: monsters.filter((monster) => monster.nemesis), // Add this line
 };
 
 function App() {
@@ -37,6 +38,10 @@ function App() {
 	const [multipleRangers, setMultipleRangers] = useStateWithLocalStorage(
 		'multipleRangers',
 		'true'
+	);
+	const [separateNemesis, setSeparateNemesis] = useStateWithLocalStorage(
+		'separateNemesis',
+		'false'
 	);
 
 	const [pickedCards, updatePickedCards] = useState([]);
@@ -58,6 +63,19 @@ function App() {
 			let availableList = lists[cardType]
 				.filter((card) => boxList.includes(card.box))
 				.filter((card) => !pickedCards.some((chosen) => chosen.id === card.id));
+
+			// Handle nemesis separation
+			if (cardType === 'monsters' && separateNemesis === 'true') {
+				availableList = availableList.filter((card) => !card.nemesis);
+			} else if (cardType === 'nemesis') {
+				availableList = lists.monsters
+					.filter((card) => card.nemesis)
+					.filter((card) => boxList.includes(card.box))
+					.filter(
+						(card) => !pickedCards.some((chosen) => chosen.id === card.id)
+					);
+			}
+
 			if (double.length) {
 				availableList = availableList.filter(
 					(card) => !double.includes(card.id)
@@ -136,6 +154,14 @@ function App() {
 		);
 	}, []);
 
+	// Add this new function
+	const handleSeparateNemesisChange = (newValue) => {
+		setSeparateNemesis(newValue);
+		if (newValue === 'false' && cardType === 'nemesis') {
+			updateCardType('monsters');
+		}
+	};
+
 	return (
 		<div
 			className={`${styles.mainContainer} ${
@@ -151,6 +177,7 @@ function App() {
 				cardType={cardType}
 				updateCardType={updateCardType}
 				drawRandomCard={drawRandomCard}
+				separateNemesis={separateNemesis}
 			/>
 			<div className={styles.contentArea}>
 				<div className={styles.cardArea}>
@@ -183,6 +210,8 @@ function App() {
 						multipleRangers={multipleRangers}
 						setMultiplePowers={setMultiplePowers}
 						setMultipleRangers={setMultipleRangers}
+						separateNemesis={separateNemesis}
+						setSeparateNemesis={handleSeparateNemesisChange}
 					/>
 				)}
 			</div>

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import styles from './header.module.scss';
 
-const Header = ({ cardType, updateCardType }) => {
+const Header = ({ cardType, updateCardType, separateNemesis }) => {
 	useEffect(() => {
 		const selectedElementID = `select_${cardType}`;
 		const selectedButton = document.getElementById(selectedElementID);
@@ -24,6 +24,15 @@ const Header = ({ cardType, updateCardType }) => {
 				}`}
 				onClick={() => updateCardType('monsters')}
 			/>
+			{separateNemesis === 'true' && (
+				<button
+					id='select_nemesis'
+					className={`${styles.nemesis} ${
+						cardType === 'nemesis' ? '' : styles.notActive
+					}`}
+					onClick={() => updateCardType('nemesis')}
+				/>
+			)}
 			<button
 				id='select_soldiers'
 				className={`${styles.soldier} ${

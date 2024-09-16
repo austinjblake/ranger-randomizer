@@ -33,6 +33,8 @@ export const OptionsArea = ({
 	multipleRangers,
 	setMultiplePowers,
 	setMultipleRangers,
+	separateNemesis,
+	setSeparateNemesis,
 }) => {
 	const allChecked = boxList.length === boxes.length;
 
@@ -123,6 +125,16 @@ export const OptionsArea = ({
 					updaterfunc={() => setAnimate(animate === 'true' ? 'false' : 'true')}
 				/>
 				<span>Enable Animations</span>
+			</label>
+			<label>
+				<Checkbox
+					checked={separateNemesis === 'true'}
+					inputboxes={separateNemesis}
+					updaterfunc={() =>
+						setSeparateNemesis(separateNemesis === 'true' ? 'false' : 'true')
+					}
+				/>
+				<span>Separate Nemesis cards from Monsters</span>
 			</label>
 			<div>
 				<h1>Ranger Randomizer</h1>
