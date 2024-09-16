@@ -144,6 +144,11 @@ export const OptionsArea = ({
 					bolt to begin drawing random cards of that type!
 				</p>
 				<p>
+					If you don&apos;t like the card you draw, click on it to hide it and
+					draw again! The hidden cards will be reset by clearing the list or
+					selecting a new expansion.
+				</p>
+				<p>
 					You can also change which Heroes of the Grid expansion boxes are used
 					to select cards from by clicking the settings button in the menu on
 					the left. Choose one of the preset packs or customize which boxes you

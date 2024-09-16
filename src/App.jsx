@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 import Header from './components/header';
 import {
 	soldiers,
@@ -109,6 +109,7 @@ function App() {
 			return;
 		}
 		updatePickedCards([]);
+		setHiddenCards([]); // Reset hiddenCards when clearing the list
 	};
 
 	const handleBoxChange = (e) => {
@@ -118,11 +119,22 @@ function App() {
 		} else {
 			updateBoxes([...boxList, e.target.value]);
 		}
+		setHiddenCards([]); // Reset hiddenCards when box selection changes
 	};
 
 	const selectAllBoxes = (fullList) => {
 		updateBoxes(fullList.map((box) => box.id));
+		setHiddenCards([]); // Reset hiddenCards when selecting all boxes
 	};
+
+	const [hiddenCards, setHiddenCards] = useState([]);
+	const toggleCardVisibility = useCallback((cardId) => {
+		setHiddenCards((prev) =>
+			prev.includes(cardId)
+				? prev.filter((id) => id !== cardId)
+				: [...prev, cardId]
+		);
+	}, []);
 
 	return (
 		<div
@@ -143,17 +155,21 @@ function App() {
 			<div className={styles.contentArea}>
 				<div className={styles.cardArea}>
 					{listView === 'list' &&
-						pickedCards.map((card, i) => (
-							<span
-								key={card.id}
-								className={styles.drawnCard}
-								ref={i === pickedCards.length - 1 ? currentCard : null}
-							>
-								<strong>
-									{card.name} {card.power} {card.subset}
-								</strong>
-							</span>
-						))}
+						pickedCards.map(
+							(card, i) =>
+								!hiddenCards.includes(card.id) && (
+									<span
+										key={card.id}
+										className={styles.drawnCard}
+										ref={i === pickedCards.length - 1 ? currentCard : null}
+										onClick={() => toggleCardVisibility(card.id)}
+									>
+										<strong>
+											{card.name} {card.power} {card.subset}
+										</strong>
+									</span>
+								)
+						)}
 				</div>
 				{listView === 'options' && (
 					<OptionsArea
