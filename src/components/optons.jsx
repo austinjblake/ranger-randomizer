@@ -44,6 +44,24 @@ export const OptionsArea = ({
 		}
 	};
 
+	// Group boxes by type
+	const groupedBoxes = boxes.reduce((acc, box) => {
+		if (!acc[box.type]) {
+			acc[box.type] = [];
+		}
+		acc[box.type].push(box);
+		return acc;
+	}, {});
+
+	// Order of box types to display
+	const boxTypeOrder = [
+		'big box',
+		'rangers',
+		'villains',
+		'foot soldiers',
+		'extras',
+	];
+
 	return (
 		<div className={styles.presetContainer}>
 			<h2>Choose your components</h2>
@@ -52,18 +70,26 @@ export const OptionsArea = ({
 			</button>
 			<div>
 				<h3>Boxes</h3>
-				{boxes.map((box) => (
-					<label key={box.id}>
-						<Checkbox
-							inputboxes={box.id}
-							checked={boxList.includes(box.id)}
-							updaterfunc={handleBoxChange}
-						/>
-						<span>{box.name}</span>
-					</label>
+				{boxTypeOrder.map((type) => (
+					<div key={type}>
+						<h4>{type.charAt(0).toUpperCase() + type.slice(1)}</h4>
+						{groupedBoxes[type].map((box) => (
+							<label key={box.id}>
+								<Checkbox
+									inputboxes={box.id}
+									checked={boxList.includes(box.id)}
+									updaterfunc={handleBoxChange}
+								/>
+								<span>
+									{box.name.charAt(0).toUpperCase() + box.name.slice(1)}
+								</span>
+							</label>
+						))}
+					</div>
 				))}
 			</div>
 			<hr />
+			<h3>Options</h3>
 			<label>
 				<Checkbox
 					checked={multiplePowers === 'true'}

@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import Header from './components/header';
 import {
-	presetPacks,
 	soldiers,
 	rangers,
 	monsters,
@@ -13,6 +12,7 @@ import { OptionsArea } from './components/optons';
 import styles from './app.module.scss';
 import { useStateWithLocalStorage } from './hooks/useLocalStorage';
 import boltIcon from './images/bolt.png';
+import { allBoxIds } from './characterLists';
 
 const lists = {
 	soldiers,
@@ -28,10 +28,7 @@ function App() {
 		'cardType',
 		'monsters'
 	);
-	const [boxList, updateBoxes] = useStateWithLocalStorage(
-		'boxList',
-		presetPacks.filter((pack) => pack.id === 1)[0].boxes
-	);
+	const [boxList, updateBoxes] = useStateWithLocalStorage('boxList', allBoxIds);
 	const [animate, setAnimate] = useStateWithLocalStorage('animate', 'true');
 	const [multiplePowers, setMultiplePowers] = useStateWithLocalStorage(
 		'multiplePowers',

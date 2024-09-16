@@ -1,150 +1,49 @@
-export const presetPacks = [
-	{
-		id: 1,
-		name: 'Morphin Master (Everything so far)',
-		boxes: [
-			'A',
-			'B',
-			'C',
-			'D',
-			'E',
-			'F',
-			'G',
-			'H',
-			'I',
-			'J',
-			'K',
-			'L',
-			'M',
-			'N',
-			'O',
-			'P',
-			'Q',
-		],
-	},
-	{ id: 2, name: 'All In-Wave 1', boxes: ['A', 'B', 'C', 'D', 'I'] },
-	{ id: 3, name: 'All In-Wave 2', boxes: ['F', 'H', 'J', 'K'] },
-];
-
 export const boxes = [
-	{ name: 'Heroes of the Grid Base Game', id: 'A' },
-	{ name: 'Kickstarter Exclusives Box #1', id: 'B' },
-	{ name: 'Shattered Grid', id: 'C' },
-	{ name: 'Villian Pack #1', id: 'D' },
-	{ name: 'Bulk and Skull Rangers', id: 'E' },
-	{ name: 'Zeo Rangers', id: 'F' },
-	{ name: 'Allies Pack #1', id: 'G' },
-	{ name: 'Legendar Ranger: Tommy Oliver', id: 'H' },
-	{ name: 'Cyclopsis', id: 'I' },
-	{ name: 'Mega Goldar', id: 'J' },
+	{ name: 'Heroes of the Grid Base Game', id: 'A', type: 'big box' },
+	{ name: 'Kickstarter Exclusives Box #1', id: 'B', type: 'big box' },
+	{ name: 'Shattered Grid', id: 'C', type: 'big box' },
+	{ name: 'Villian Pack #1', id: 'D', type: 'villains' },
+	{ name: 'Bulk and Skull Rangers', id: 'E', type: 'rangers' },
+	{ name: 'Zeo Rangers', id: 'F', type: 'rangers' },
+	{ name: 'Allies Pack #1', id: 'G', type: 'rangers' },
+	{ name: 'Legendar Ranger: Tommy Oliver', id: 'H', type: 'rangers' },
+	{ name: 'Cyclopsis', id: 'I', type: 'villains' },
+	{ name: 'Mega Goldar', id: 'J', type: 'villains' },
 	{
 		name: 'Kickstarter Exclusives #2: Zeo Red Battlezord and Gold Zeo Ranger',
 		id: 'K',
+		type: 'extras',
 	},
-	{
-		name: 'Rise of the Psycho Rangers',
-		id: 'L',
-	},
-	{
-		name: 'Villain Pack #2: Machine Empire',
-		id: 'M',
-	},
-	{
-		name: 'Legendary Rangers: Forever Rangers',
-		id: 'N',
-	},
+	{ name: 'Rise of the Psycho Rangers', id: 'L', type: 'big box' },
+	{ name: 'Villain Pack #2: Machine Empire', id: 'M', type: 'villains' },
+	{ name: 'Legendary Rangers: Forever Rangers', id: 'N', type: 'rangers' },
 	{
 		name: 'Fan Appreciation Pack: Titanus and Ultrazord',
 		id: 'O',
+		type: 'extras',
 	},
-	{
-		name: 'Squatt and Baboo Character Pack',
-		id: 'P',
-	},
-	{
-		name: 'Villain Pack #3: Legacy of Evil',
-		id: 'Q',
-	},
-	{
-		name: 'Rangers United',
-		id: 'R',
-	},
-	{
-		name: 'Light and Darkness',
-		id: 'S',
-	},
-	{
-		name: 'Dino Thunder',
-		id: 'T',
-	},
-	{
-		name: 'Time Force',
-		id: 'U',
-	},
-	{
-		name: 'S.P.D.',
-		id: 'V',
-	},
-	{
-		name: 'Allies Pack #2',
-		id: 'W',
-	},
-	{
-		name: 'Allies Pack #3',
-		id: 'X',
-	},
-	{
-		name: 'Villian Pack #4: A Dark Turn',
-		id: 'Y',
-	},
-	{
-		name: 'Villian Pack #5: Trouble Through Time',
-		id: 'Z',
-	},
-	{
-		name: 'Shadow of Venjix',
-		id: 'AA',
-	},
-	{
-		name: 'Santa Vs. Heximas',
-		id: 'AB',
-	},
-	{
-		name: 'Merciless Minions Pack #1',
-		id: 'AC',
-	},
-	{
-		name: 'Merciless Minions Pack #2',
-		id: 'AD',
-	},
-	{
-		name: 'Zord Pack #1',
-		id: 'AE',
-	},
-	{
-		name: 'Zord Pack #2',
-		id: 'AF',
-	},
-	{
-		name: 'Zord Pack #3',
-		id: 'AG',
-	},
-	{
-		name: 'Arsenal Pack',
-		id: 'AH',
-	},
-	{
-		name: 'RPM',
-		id: 'AI',
-	},
-	{
-		name: 'Allies Pack #4',
-		id: 'AJ',
-	},
-	{
-		name: 'Foot Soldier Promo Pack #1',
-		id: 'AK',
-	},
+	{ name: 'Squatt and Baboo Character Pack', id: 'P', type: 'villains' },
+	{ name: 'Villain Pack #3: Legacy of Evil', id: 'Q', type: 'villains' },
+	{ name: 'Rangers United', id: 'R', type: 'big box' },
+	{ name: 'Light and Darkness', id: 'S', type: 'big box' },
+	{ name: 'Dino Thunder', id: 'T', type: 'rangers' },
+	{ name: 'Time Force', id: 'U', type: 'rangers' },
+	{ name: 'S.P.D.', id: 'V', type: 'rangers' },
+	{ name: 'Allies Pack #2', id: 'W', type: 'rangers' },
+	{ name: 'Allies Pack #3', id: 'X', type: 'rangers' },
+	{ name: 'Villian Pack #4: A Dark Turn', id: 'Y', type: 'villains' },
+	{ name: 'Villian Pack #5: Trouble Through Time', id: 'Z', type: 'villains' },
+	{ name: 'Shadow of Venjix', id: 'AA', type: 'big box' },
+	{ name: 'Santa Vs. Heximas', id: 'AB', type: 'extras' },
+	{ name: 'Merciless Minions Pack #1', id: 'AC', type: 'foot soldiers' },
+	{ name: 'Merciless Minions Pack #2', id: 'AD', type: 'foot soldiers' },
+	{ name: 'Zord Pack #1', id: 'AE', type: 'extras' },
+	{ name: 'Zord Pack #2', id: 'AF', type: 'extras' },
+	{ name: 'Zord Pack #3', id: 'AG', type: 'extras' },
+	{ name: 'Arsenal Pack', id: 'AH', type: 'rangers' },
+	{ name: 'RPM', id: 'AI', type: 'rangers' },
+	{ name: 'Allies Pack #4', id: 'AJ', type: 'rangers' },
+	{ name: 'Foot Soldier Promo Pack #1', id: 'AK', type: 'foot soldiers' },
 ];
 
 export const soldiers = [
@@ -555,3 +454,5 @@ export const monsters = [
 	{ id: 2048, name: 'Heximas', box: 'AB' },
 	{ id: 2049, name: 'Void Knight', box: 'AH' },
 ];
+
+export const allBoxIds = boxes.map((box) => box.id);
