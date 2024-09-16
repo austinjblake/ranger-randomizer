@@ -162,9 +162,9 @@ export const OptionsArea = ({
 				</p>
 				<p>
 					You can also change which Heroes of the Grid expansion boxes are used
-					to select cards from by clicking the settings button in the menu on
-					the left. Choose one of the preset packs or customize which boxes you
-					want to include by checking and unchecking expansions.
+					to select cards from by clicking the settings button at the bottom of
+					the screen. Customize which boxes you want to include by checking and
+					unchecking expansions.
 				</p>
 				{/* <p>
 					<address>

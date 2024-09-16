@@ -1,0 +1,35 @@
+.gradient-icon {
+  color: black; /* Initial color */
+  background: linear-gradient(to bottom right, red, red);
+  background-size: 200% 200%;
+  background-position: 0 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all 2s ease;
+  transition: transform 0.2s ease-in-out;
+
+  &.hovered {
+    color: transparent;
+    background-position: 100% 100%;
+    animation: shake 2s infinite;
+  }
+
+  &.shake {
+    animation: shake 2s infinite;
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+}

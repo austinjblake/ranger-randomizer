@@ -11,8 +11,11 @@ import {
 import { OptionsArea } from './components/optons';
 import styles from './app.module.scss';
 import { useStateWithLocalStorage } from './hooks/useLocalStorage';
-import boltIcon from './images/bolt.png';
 import { allBoxIds } from './characterLists';
+import CogIcon from './components/cog';
+import SquareXIcon from './components/squarex';
+import SuperButton from './components/superButton';
+import boltIcon from './images/bolt.png'; // Make sure this path is correct
 
 const lists = {
 	soldiers,
@@ -168,11 +171,11 @@ function App() {
 				animate === 'true' ? '' : styles.disableAnimation
 			}`}
 		>
-			<div className={styles.starContainer}>
+			{/* <div className={styles.starContainer}>
 				<div className={styles.stars}></div>
 				<div className={styles.stars2}></div>
 				<div className={styles.stars3}></div>
-			</div>
+			</div> */}
 			<Header
 				cardType={cardType}
 				updateCardType={updateCardType}
@@ -223,40 +226,17 @@ function App() {
 					}
 					className={styles.alpha}
 				>
-					<div className={styles.head}>
-						<div className={styles.ball} />
-						<div className={styles.middle}>
-							<div className={styles.eyes}>
-								<div className={`${styles.laser} ${styles.left}`} />
-								<div className={`${styles.laser} ${styles.right}`} />
-							</div>
-						</div>
-					</div>
+					<CogIcon />
 				</button>
 				<div className={styles.content}>
-					<button
-						className={styles.draw}
-						onClick={() => drawRandomCard()}
-						title='Draw Card'
-					>
-						<img src={boltIcon} alt='Draw Card' />
-					</button>
-					<div className={styles.frame}>
-						<div className={styles.clr}></div>
-					</div>
+					<SuperButton onClick={() => drawRandomCard()} icon={boltIcon} />
 				</div>
 				<button
 					className={styles.clearButton}
 					title='Clear List'
 					onClick={clearList}
 				>
-					<div className={styles.dumpsterContainer}>
-						<div className={styles.innerDumpster} />
-						<div className={styles.lid}>
-							<div className={styles.gem} />
-						</div>
-						<div className={styles.dumpster}></div>
-					</div>
+					<SquareXIcon />
 				</button>
 			</div>
 		</div>
