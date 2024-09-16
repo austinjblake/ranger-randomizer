@@ -34,6 +34,7 @@ export default [
 				'warn',
 				{ allowConstantExport: true },
 			],
+			'no-unused-vars': 'warn', // Warn for unused variables
 		},
 	},
 ];

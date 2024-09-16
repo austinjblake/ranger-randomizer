@@ -118,14 +118,14 @@ export const OptionsArea = ({
 					Tommy Oliver Turbo Red)
 				</span>
 			</label>
-			<label>
+			{/* <label>
 				<Checkbox
 					checked={animate === 'true'}
 					inputboxes={animate}
 					updaterfunc={() => setAnimate(animate === 'true' ? 'false' : 'true')}
 				/>
 				<span>Enable Animations</span>
-			</label>
+			</label> */}
 			<label>
 				<Checkbox
 					checked={separateNemesis === 'true'}
