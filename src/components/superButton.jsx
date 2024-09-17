@@ -1,5 +1,5 @@
 import styles from './superButton.module.scss';
-import boltImage from '../images/bolt.png';
+import boltImage from '../images/bolt.webp';
 
 const SuperButton = ({ onClick }) => {
 	return (

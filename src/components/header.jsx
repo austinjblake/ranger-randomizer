@@ -1,13 +1,13 @@
 import { useEffect } from 'react';
 import styles from './header.module.scss';
-import ritaImage from '../images/rita.jpg';
-import pudgyImage from '../images/pudgy.jpg';
-import puttyImage from '../images/putty.jpg';
-import rangerImage from '../images/ranger.jpg';
-import zordImage from '../images/zord.jpg';
-import megazordImage from '../images/megazord.jpg';
-import nemesisImage from '../images/nemesis.jpg';
-import arsenalImage from '../images/arsenal.png';
+import ritaImage from '../images/rita.webp';
+import pudgyImage from '../images/pudgy.webp';
+import puttyImage from '../images/putty.webp';
+import rangerImage from '../images/ranger.webp';
+import zordImage from '../images/zord.webp';
+import megazordImage from '../images/megazord.webp';
+import nemesisImage from '../images/nemesis.webp';
+import arsenalImage from '../images/arsenal.webp';
 
 const Header = ({ cardType, updateCardType, separateNemesis }) => {
 	useEffect(() => {
