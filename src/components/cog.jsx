@@ -24,7 +24,7 @@ function CogIcon() {
 		<div
 			className={`${styles.cogIcon} ${isSpinning ? styles.spin : ''}`}
 			onMouseEnter={handleMouseEnter}
-			onMouseLeave={handleMouseLeave} // Added onMouseLeave handler
+			onMouseLeave={handleMouseLeave}
 		>
 			<Cog size={60} color='#a8a8a8' />
 		</div>

@@ -455,5 +455,27 @@ export const monsters = [
 	{ id: 2049, name: 'Void Knight', box: 'AH' },
 ];
 
+export const arsenal = [
+	{ id: 4001, name: 'Red Battlizer Armor', box: 'AH' },
+	{ id: 4002, name: 'Dragon Shield', box: 'AH' },
+	{ id: 4003, name: 'Animarium Armor', box: 'AH' },
+	{ id: 4004, name: 'Quantum Megabattle Armor', box: 'AH' },
+	{ id: 4005, name: 'Defender Vest', box: 'AH' },
+	{ id: 4006, name: 'Dino Charge Battlizer', box: 'AH' },
+	{ id: 4007, name: 'Hyperforce Battlizer', box: 'AH' },
+	{ id: 4008, name: 'Dino Knight Mode', box: 'AH' },
+	{ id: 4009, name: 'Red Fury Mode', box: 'AH' },
+	{ id: 4010, name: 'The Power of Six', box: 'AH' },
+	{ id: 4011, name: 'Zeo Jet Cycles', box: 'AH' },
+	{ id: 4012, name: 'Thunder Slinger', box: 'AH' },
+	{ id: 4013, name: 'Black Box', box: 'AH' },
+	{ id: 4014, name: 'Sword of Darkness', box: 'AH' },
+	{ id: 4015, name: 'Metallic Armor', box: 'AH' },
+	{ id: 4016, name: 'Lights of Orion', box: 'AH' },
+	{ id: 4017, name: 'Super Dino Mode', box: 'AH' },
+	{ id: 4018, name: 'S.W.A.T. Armor', box: 'AH' },
+	{ id: 4019, name: 'Sword of Light', box: 'AH' },
+	{ id: 4020, name: 'Power of the Solarix', box: 'AH' },
+];
+
 export const allBoxIds = boxes.map((box) => box.id);
-// ... existing code ...

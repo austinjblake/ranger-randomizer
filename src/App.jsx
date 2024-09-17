@@ -7,6 +7,7 @@ import {
 	masters,
 	zords,
 	megazords,
+	arsenal,
 } from './characterLists';
 import { OptionsArea } from './components/optons';
 import styles from './app.module.scss';
@@ -15,7 +16,7 @@ import { allBoxIds } from './characterLists';
 import CogIcon from './components/cog';
 import SquareXIcon from './components/squarex';
 import SuperButton from './components/superButton';
-import boltIcon from './images/bolt.png'; // Make sure this path is correct
+import boltIcon from './images/bolt.png';
 
 const lists = {
 	soldiers,
@@ -24,7 +25,8 @@ const lists = {
 	zords,
 	megazords,
 	masters,
-	nemesis: monsters.filter((monster) => monster.nemesis), // Add this line
+	nemesis: monsters.filter((monster) => monster.nemesis),
+	arsenal,
 };
 
 function App() {
@@ -89,7 +91,6 @@ function App() {
 				return;
 			}
 			const newCard = pickRandom(availableList);
-			// insert double checks here
 			if (
 				cardType === 'rangers' &&
 				((multiplePowers === 'false' &&
@@ -157,7 +158,6 @@ function App() {
 		);
 	}, []);
 
-	// Add this new function
 	const handleSeparateNemesisChange = (newValue) => {
 		setSeparateNemesis(newValue);
 		if (newValue === 'false' && cardType === 'nemesis') {

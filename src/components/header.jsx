@@ -61,6 +61,13 @@ const Header = ({ cardType, updateCardType, separateNemesis }) => {
 				}`}
 				onClick={() => updateCardType('megazords')}
 			/>
+			<button
+				id='select_arsenal'
+				className={`${styles.arsenal} ${
+					cardType === 'arsenal' ? '' : styles.notActive
+				}`}
+				onClick={() => updateCardType('arsenal')}
+			/>
 		</header>
 	);
 };
