@@ -1,5 +1,13 @@
 import { useEffect } from 'react';
 import styles from './header.module.scss';
+import ritaImage from '../images/rita.jpg';
+import pudgyImage from '../images/pudgy.jpg';
+import puttyImage from '../images/putty.jpg';
+import rangerImage from '../images/ranger.jpg';
+import zordImage from '../images/zord.jpg';
+import megazordImage from '../images/megazord.jpg';
+import nemesisImage from '../images/nemesis.jpg';
+import arsenalImage from '../images/arsenal.png';
 
 const Header = ({ cardType, updateCardType, separateNemesis }) => {
 	useEffect(() => {
@@ -13,69 +21,69 @@ const Header = ({ cardType, updateCardType, separateNemesis }) => {
 			<button
 				id='select_masters'
 				title='Masters'
-				className={`${styles.master} ${
-					cardType === 'masters' ? '' : styles.notActive
-				}`}
+				className={cardType === 'masters' ? '' : styles.notActive}
 				onClick={() => updateCardType('masters')}
-			/>
+			>
+				<img src={ritaImage} alt='Masters' />
+			</button>
 			<button
 				id='select_monsters'
 				title='Monsters'
-				className={`${styles.monster} ${
-					cardType === 'monsters' ? '' : styles.notActive
-				}`}
+				className={cardType === 'monsters' ? '' : styles.notActive}
 				onClick={() => updateCardType('monsters')}
-			/>
+			>
+				<img src={pudgyImage} alt='Monsters' />
+			</button>
 			{separateNemesis === 'true' && (
 				<button
 					id='select_nemesis'
 					title='Nemesis'
-					className={`${styles.nemesis} ${
-						cardType === 'nemesis' ? '' : styles.notActive
-					}`}
+					className={cardType === 'nemesis' ? '' : styles.notActive}
 					onClick={() => updateCardType('nemesis')}
-				/>
+				>
+					<img src={nemesisImage} alt='Nemesis' />
+				</button>
 			)}
 			<button
 				id='select_soldiers'
 				title='Foot Soldiers'
-				className={`${styles.soldier} ${
-					cardType === 'soldiers' ? '' : styles.notActive
-				}`}
+				className={cardType === 'soldiers' ? '' : styles.notActive}
 				onClick={() => updateCardType('soldiers')}
-			/>
+			>
+				<img src={puttyImage} alt='Foot Soldiers' />
+			</button>
 			<button
 				id='select_rangers'
 				title='Rangers'
-				className={`${styles.ranger} ${
-					cardType === 'rangers' ? '' : styles.notActive
-				}`}
+				className={cardType === 'rangers' ? '' : styles.notActive}
 				onClick={() => updateCardType('rangers')}
-			/>
+			>
+				<img src={rangerImage} alt='Rangers' />
+			</button>
 			<button
 				id='select_zords'
 				title='Zords'
-				className={`${styles.zord} ${
-					cardType === 'zords' ? '' : styles.notActive
-				}`}
+				className={cardType === 'zords' ? '' : styles.notActive}
 				onClick={() => updateCardType('zords')}
-			/>
+			>
+				<img src={zordImage} alt='Zords' />
+			</button>
 			<button
 				id='select_megazords'
 				title='Megazords'
-				className={`${styles.megazord} ${
-					cardType === 'megazords' ? '' : styles.notActive
-				}`}
+				className={cardType === 'megazords' ? '' : styles.notActive}
 				onClick={() => updateCardType('megazords')}
-			/>
+			>
+				<img src={megazordImage} alt='Megazords' />
+			</button>
 			<button
 				id='select_arsenal'
 				title='Arsenal'
-				className={`${styles.arsenal} ${
-					cardType === 'arsenal' ? '' : styles.notActive
-				}`}
+				className={cardType === 'arsenal' ? '' : styles.notActive}
 				onClick={() => updateCardType('arsenal')}
-			/>
+			>
+				<img src={arsenalImage} alt='Arsenal' />
+			</button>
 		</header>
 	);
 };

@@ -16,7 +16,6 @@ import { allBoxIds } from './characterLists';
 import CogIcon from './components/cog';
 import SquareXIcon from './components/squarex';
 import SuperButton from './components/superButton';
-import boltIcon from './images/bolt.png';
 
 const lists = {
 	soldiers,
@@ -229,7 +228,7 @@ function App() {
 					<CogIcon />
 				</button>
 				<div className={styles.content}>
-					<SuperButton onClick={() => drawRandomCard()} icon={boltIcon} />
+					<SuperButton onClick={() => drawRandomCard()} />
 				</div>
 				<button
 					className={styles.clearButton}

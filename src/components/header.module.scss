@@ -21,37 +21,23 @@
 		border-radius: 50%;
 		background-position: center;
 		background-size: cover;
+		position: relative;
 		&:hover {
 			cursor: pointer;
 			box-shadow: 0 0 25px rgb(228, 214, 214);
 		}
-	}
-	.master {
-		background-image: url('../images/rita.jpg');
-	}
-	.monster {
-		background-image: url('../images/pudgy.jpg');
-	}
-	.soldier {
-		background-image: url('../images/putty.jpg');
-	}
-	.ranger {
-		background-image: url('../images/ranger.jpg');
-	}
-	.zord {
-		background-image: url('../images/zord.jpg');
-	}
-	.megazord {
-		background-image: url('../images/megazord.jpg');
-	}
-	.nemesis {
-		background-image: url('../images/nemesis.jpg');
+    img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 50%;
+			position: absolute;
+			top: 0;
+			left: 0;
+    }
 	}
 	.notActive {
 		-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
 		filter: grayscale(100%);
-	}
-	.arsenal {
-		background-image: url('../images/arsenal.png');
 	}
 }
