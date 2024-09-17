@@ -33,7 +33,7 @@ export const boxes = [
 	{ name: 'Allies Pack #3', id: 'X', type: 'rangers' },
 	{ name: 'Villian Pack #4: A Dark Turn', id: 'Y', type: 'villains' },
 	{ name: 'Villian Pack #5: Trouble Through Time', id: 'Z', type: 'villains' },
-	{ name: 'Shadow of Venjix', id: 'AA', type: 'big box' },
+	{ name: 'Shadow of Venjix', id: 'AA', type: 'extras' },
 	{ name: 'Santa Vs. Heximas', id: 'AB', type: 'extras' },
 	{ name: 'Merciless Minions Pack #1', id: 'AC', type: 'foot soldiers' },
 	{ name: 'Merciless Minions Pack #2', id: 'AD', type: 'foot soldiers' },
@@ -60,6 +60,7 @@ export const soldiers = [
 	{ id: 1011, name: 'Tyrannodrones', box: 'AD', image: '' },
 	{ id: 1012, name: 'Krybots', box: 'AD', image: '' },
 	{ id: 1013, name: 'Ranger Sentries', box: 'AK', image: '' },
+	{ id: 1014, name: 'Chaos Putties', box: 'AC', image: '' },
 ];
 
 export const rangers = [
@@ -401,6 +402,8 @@ export const masters = [
 	{ id: 3019, name: 'Astronema', box: 'Y' },
 	{ id: 3020, name: 'Trakeena', box: 'Z' },
 	{ id: 3021, name: 'Ransik', box: 'Z' },
+	{ id: 3022, name: 'Final Venjix', box: 'AA' },
+	{ id: 3023, name: 'Perfect Evox', box: 'AA' },
 ];
 
 export const monsters = [
@@ -453,6 +456,7 @@ export const monsters = [
 	{ id: 2047, name: 'Frax', box: 'Z' },
 	{ id: 2048, name: 'Heximas', box: 'AB' },
 	{ id: 2049, name: 'Void Knight', box: 'AH' },
+	{ id: 2050, name: 'Tenaya 7', box: 'AA' },
 ];
 
 export const arsenal = [
