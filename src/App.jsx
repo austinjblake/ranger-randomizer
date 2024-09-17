@@ -13,8 +13,6 @@ import { OptionsArea } from './components/optons';
 import styles from './app.module.scss';
 import { useStateWithLocalStorage } from './hooks/useLocalStorage';
 import { allBoxIds } from './characterLists';
-import CogIcon from './components/cog';
-import SquareXIcon from './components/squarex';
 import SuperButton from './components/superButton';
 
 const lists = {
@@ -225,7 +223,15 @@ function App() {
 					}
 					className={styles.alpha}
 				>
-					<CogIcon />
+					<div className={styles.head}>
+						<div className={styles.ball} />
+						<div className={styles.middle}>
+							<div className={styles.eyes}>
+								<div className={`${styles.laser} ${styles.left}`} />
+								<div className={`${styles.laser} ${styles.right}`} />
+							</div>
+						</div>
+					</div>
 				</button>
 				<div className={styles.content}>
 					<SuperButton onClick={() => drawRandomCard()} />
@@ -235,7 +241,13 @@ function App() {
 					title='Clear List'
 					onClick={clearList}
 				>
-					<SquareXIcon />
+					<div className={styles.dumpsterContainer}>
+						<div className={styles.innerDumpster} />
+						<div className={styles.lid}>
+							<div className={styles.gem} />
+						</div>
+						<div className={styles.dumpster}></div>
+					</div>
 				</button>
 			</div>
 		</div>
