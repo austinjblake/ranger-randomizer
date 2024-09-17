@@ -12,6 +12,7 @@ const Header = ({ cardType, updateCardType, separateNemesis }) => {
 		<header className={styles.headerContainer}>
 			<button
 				id='select_masters'
+				title='Masters'
 				className={`${styles.master} ${
 					cardType === 'masters' ? '' : styles.notActive
 				}`}
@@ -19,6 +20,7 @@ const Header = ({ cardType, updateCardType, separateNemesis }) => {
 			/>
 			<button
 				id='select_monsters'
+				title='Monsters'
 				className={`${styles.monster} ${
 					cardType === 'monsters' ? '' : styles.notActive
 				}`}
@@ -27,6 +29,7 @@ const Header = ({ cardType, updateCardType, separateNemesis }) => {
 			{separateNemesis === 'true' && (
 				<button
 					id='select_nemesis'
+					title='Nemesis'
 					className={`${styles.nemesis} ${
 						cardType === 'nemesis' ? '' : styles.notActive
 					}`}
@@ -35,6 +38,7 @@ const Header = ({ cardType, updateCardType, separateNemesis }) => {
 			)}
 			<button
 				id='select_soldiers'
+				title='Foot Soldiers'
 				className={`${styles.soldier} ${
 					cardType === 'soldiers' ? '' : styles.notActive
 				}`}
@@ -42,6 +46,7 @@ const Header = ({ cardType, updateCardType, separateNemesis }) => {
 			/>
 			<button
 				id='select_rangers'
+				title='Rangers'
 				className={`${styles.ranger} ${
 					cardType === 'rangers' ? '' : styles.notActive
 				}`}
@@ -49,6 +54,7 @@ const Header = ({ cardType, updateCardType, separateNemesis }) => {
 			/>
 			<button
 				id='select_zords'
+				title='Zords'
 				className={`${styles.zord} ${
 					cardType === 'zords' ? '' : styles.notActive
 				}`}
@@ -56,6 +62,7 @@ const Header = ({ cardType, updateCardType, separateNemesis }) => {
 			/>
 			<button
 				id='select_megazords'
+				title='Megazords'
 				className={`${styles.megazord} ${
 					cardType === 'megazords' ? '' : styles.notActive
 				}`}
@@ -63,6 +70,7 @@ const Header = ({ cardType, updateCardType, separateNemesis }) => {
 			/>
 			<button
 				id='select_arsenal'
+				title='Arsenal'
 				className={`${styles.arsenal} ${
 					cardType === 'arsenal' ? '' : styles.notActive
 				}`}
