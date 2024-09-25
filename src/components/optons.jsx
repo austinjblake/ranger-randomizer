@@ -166,14 +166,14 @@ export const OptionsArea = ({
 					the screen. Customize which boxes you want to include by checking and
 					unchecking expansions.
 				</p>
-				<p>
+				<div>
 					<address>
 						If you have any questions, feel free to email{' '}
 						<a href='mailto:help@rangerrandomizer.com'>
 							help@rangerrandomizer.com
 						</a>
 					</address>
-				</p>
+				</div>
 			</div>
 		</div>
 	);

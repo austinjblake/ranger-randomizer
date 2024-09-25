@@ -49,45 +49,50 @@ function App() {
 	const [pickedCards, updatePickedCards] = useState([]);
 	const [listView, changeView] = useState('list');
 
+	// Reference to the last card picked. Used to scroll to it
 	const currentCard = useRef();
 
+	// Pick a random card from the list
 	const pickRandom = (choices) => {
 		const random = choices[Math.floor(Math.random() * choices.length)];
 		return random;
 	};
 
+	// Draw a random card, calling itself recursively if a duplicate is detected
 	const drawRandomCard = (double = []) => {
+		// If the current view is not the list view, change to the list view
 		if (listView !== 'list') {
 			changeView('list');
 			return;
 		}
 		if (lists[cardType] && lists[cardType].length) {
-			let availableList = lists[cardType]
-				.filter((card) => boxList.includes(card.box))
-				.filter((card) => !pickedCards.some((chosen) => chosen.id === card.id));
+			// Initialize unpicked list of cards from chosen boxes and card type
+			let availableList = lists[cardType].filter((card) =>
+				boxList.includes(card.box)
+			);
 
-			// Handle nemesis separation
+			// Handle nemesis separation to create new monster list if needed
 			if (cardType === 'monsters' && separateNemesis === 'true') {
 				availableList = availableList.filter((card) => !card.nemesis);
-			} else if (cardType === 'nemesis') {
-				availableList = lists.monsters
-					.filter((card) => card.nemesis)
-					.filter((card) => boxList.includes(card.box))
-					.filter(
-						(card) => !pickedCards.some((chosen) => chosen.id === card.id)
-					);
 			}
-
+			// Remove cards that are marked as a double from a recursive call
 			if (double.length) {
 				availableList = availableList.filter(
 					(card) => !double.includes(card.id)
 				);
 			}
+			// Remove cards that have already been picked
+			availableList = availableList.filter(
+				(card) => !pickedCards.some((chosen) => chosen.id === card.id)
+			);
+			// If no cards are available, do nothing
 			if (!availableList.length) {
 				console.log('available list empty');
 				return;
 			}
+			// Pick a random card from the available list
 			const newCard = pickRandom(availableList);
+			// If the card is a ranger and either multiple powers or multiple rangers are disabled, check for duplicate powers or names
 			if (
 				cardType === 'rangers' &&
 				((multiplePowers === 'false' &&
@@ -96,19 +101,25 @@ function App() {
 						pickedCards.some((ranger) => ranger.name === newCard.name)))
 			) {
 				console.log('double detected');
+				// Add the card to the double list
 				double.push(newCard.id);
+				// Try again
 				drawRandomCard(double);
 				return;
 			}
+			// Check for duplicate zords. There are multiple boxes with the same zord in them
 			if (
 				cardType === 'zords' &&
 				pickedCards.some((zord) => zord.name === newCard.name)
 			) {
 				console.log('double detected');
+				// Add the card to the double list
 				double.push(newCard.id);
+				// Try again
 				drawRandomCard(double);
 				return;
 			}
+			// Add the card to the picked cards list
 			const newList = [...pickedCards, newCard];
 			updatePickedCards(newList);
 		} else {
@@ -116,12 +127,14 @@ function App() {
 		}
 	};
 
+	// Scroll to the last card in the picked cards list
 	useEffect(() => {
 		if (pickedCards.length && currentCard && currentCard.current) {
 			currentCard.current.scrollIntoView(false);
 		}
 	}, [pickedCards.length]);
 
+	// Clear the picked cards list
 	const clearList = () => {
 		if (listView !== 'list') {
 			changeView('list');
@@ -131,6 +144,7 @@ function App() {
 		setHiddenCards([]); // Reset hiddenCards when clearing the list
 	};
 
+	// Handle box selection changes
 	const handleBoxChange = (e) => {
 		if (boxList.includes(e.target.value)) {
 			let updatedList = [...boxList].filter((box) => box !== e.target.value);
@@ -141,11 +155,13 @@ function App() {
 		setHiddenCards([]); // Reset hiddenCards when box selection changes
 	};
 
+	// Select all boxes
 	const selectAllBoxes = (fullList) => {
 		updateBoxes(fullList.map((box) => box.id));
 		setHiddenCards([]); // Reset hiddenCards when selecting all boxes
 	};
 
+	// Handle card visibility toggles
 	const [hiddenCards, setHiddenCards] = useState([]);
 	const toggleCardVisibility = useCallback((cardId) => {
 		setHiddenCards((prev) =>
@@ -155,6 +171,7 @@ function App() {
 		);
 	}, []);
 
+	// Handle separate nemesis changes
 	const handleSeparateNemesisChange = (newValue) => {
 		setSeparateNemesis(newValue);
 		if (newValue === 'false' && cardType === 'nemesis') {
@@ -184,6 +201,7 @@ function App() {
 					{listView === 'list' &&
 						pickedCards.map(
 							(card, i) =>
+								// If the card is not hidden, render it
 								!hiddenCards.includes(card.id) && (
 									<span
 										key={card.id}
