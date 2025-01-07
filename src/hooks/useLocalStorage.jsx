@@ -5,7 +5,7 @@ export const useStateWithLocalStorage = (
 	defaultValue = ''
 ) => {
 	const [value, setValue] = useState(
-		JSON.parse(localStorage.getItem(localStorageKey)) || defaultValue
+		() => JSON.parse(localStorage.getItem(localStorageKey)) || defaultValue
 	);
 
 	useEffect(() => {
