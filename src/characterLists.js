@@ -44,6 +44,7 @@ export const boxes = [
 	{ name: 'RPM', id: 'AI', type: 'rangers' },
 	{ name: 'Allies Pack #4', id: 'AJ', type: 'rangers' },
 	{ name: 'Foot Soldier Promo Pack #1', id: 'AK', type: 'foot soldiers' },
+	{ name: 'Eternal Rangers', id: 'AL', type: 'big box' },
 ];
 
 export const soldiers = [
@@ -223,6 +224,32 @@ export const rangers = [
 	{ id: 106, name: 'Tyler NaVarro', power: 'Dino Charge Red', box: 'AH' },
 	{ id: 107, name: 'Trini Kwan', power: 'Dragon Armor', box: 'AH' },
 	{ id: 108, name: 'Izzy Garcia', power: 'Dino Fury Green', box: 'AH' },
+	{ id: 109, name: 'Nick Russel', power: 'Red Mystic', box: 'AL' },
+	{ id: 110, name: 'Chip Thorn', power: 'Yellow Mystic', box: 'AL' },
+	{ id: 111, name: 'Madison Roca', power: 'Blue Mystic', box: 'AL' },
+	{ id: 112, name: 'Vida Roca', power: 'Pink Mystic', box: 'AL' },
+	{ id: 113, name: 'Xander Bly', power: 'Green Mystic', box: 'AL' },
+	{ id: 114, name: 'Kimberly Ann Hart', power: 'Pink Solar', box: 'AL' },
+	{ id: 115, name: 'Mike Corbett', power: 'Black Solar', box: 'AL' },
+	{ id: 116, name: 'Tanya Sloan', power: 'Yellow Solar', box: 'AL' },
+	{ id: 117, name: 'Heckyl', power: 'Blue Solar', box: 'AL' },
+	{ id: 118, name: 'Andros', power: 'Red Solar', box: 'AL' },
+	{ id: 119, name: 'Cameron Watanabe', power: 'Green Solar', box: 'AL' },
+	{ id: 120, name: 'Grace Sterling', power: 'Mighty Morphin Red', box: 'AL' },
+	{ id: 121, name: 'Adam Park', power: 'Mighty Morphin Black', subset: "Defender Vest", box: 'AL' },
+	{ id: 122, name: 'Adam Park', power: 'Black Ninja', box: 'AL' },
+	{ id: 123, name: 'Billy Cranston', power: 'Mighty Morphin Blue', subset: "Still Standing", box: 'AL' },
+	{ id: 124, name: 'Minh Kwan', power: 'Mighty Morphin Yellow', box: 'AL' },
+	{ id: 125, name: 'Olivia Hart', power: 'Mighty Morphin Pink', box: 'AL' },
+	{ id: 126, name: 'Olivia Hart', power: 'Mighty Morphin Green', box: 'AL' },
+	{ id: 127, name: 'Zordon', power: 'Mentor of the Power Rangers', box: 'AL' },
+	{ id: 128, name: 'T.J. Johnson', power: 'Turbo Red', box: 'AL' },
+	{ id: 129, name: 'Justin Stewart', power: 'Turbo Blue', box: 'AL' },
+	{ id: 130, name: 'Zayto', power: 'Cosmic Fury Zenith', box: 'AL' },
+	{ id: 131, name: 'Yale of Saard', power: 'Omega Blue', box: 'AL' },
+	{ id: 132, name: 'J.J. Oliver', power: 'S.P.D. Green', box: 'AL' },
+	{ id: 133, name: 'Trini Kwan', power: 'Omega Red', box: 'AL' },
+
 ];
 
 export const megazords = [
@@ -257,6 +284,25 @@ export const megazords = [
 	{ id: 9029, name: 'Valvemax Megazord', box: 'AI' },
 	{ id: 9030, name: 'Ninja Storm Thunder Megazord', box: 'AJ' },
 	{ id: 9031, name: 'Bull Rider Megazord', box: 'AJ' },
+	{ id: 9032, name: 'Titan Megazord', box: 'AL' },
+	{ id: 9033, name: 'Ultra Omegazord', box: 'AL' },
+	{ id: 9034, name: 'Zenith Megazord', box: 'AL' },
+	{ id: 9035, name: 'Mega Gravezord', box: 'AL' },
+	{ id: 9036, name: 'Ninja Ultrazord', box: 'AL' },
+	{ id: 9037, name: 'Thunder Ultrazord', box: 'AL' },
+	{ id: 9038, name: 'Winged Mega Voyager', box: 'AL' },
+	{ id: 9039, name: 'Shogun MegaFalconzord', box: 'AL' },
+	{ id: 9040, name: 'Mega Dragonzord', box: 'AL' },
+	{ id: 9041, name: 'Mega Megazord', box: 'AL' },
+	{ id: 9042, name: 'Galaxy Megazord', box: 'AL' },
+	{ id: 9043, name: 'Rescue Megazord', box: 'AL' },
+	{ id: 9044, name: 'RPM Ultrazord', box: 'AL' },
+	{ id: 9045, name: 'Claw Armor Megazord', box: 'AL' },
+	{ id: 9046, name: 'Gosei Great Megazord', box: 'AL' },
+	{ id: 9047, name: 'Dino Charge Megazord', box: 'AL' },
+	{ id: 9048, name: 'Dragon Thunderzord', box: 'AL' },
+	{ id: 9049, name: 'Turbo Megazord', box: 'AL' },
+	{ id: 9050, name: 'Astro Megazord', box: 'AL' },
 ];
 
 export const zords = [
@@ -378,6 +424,28 @@ export const zords = [
 	{ id: 8116, name: 'T-Rex Zord', box: 'AH' },
 	{ id: 8117, name: 'Tiger Claw Zord', box: 'AH' },
 	{ id: 8118, name: 'Mega Black Dragon', box: 'AH' },
+	{ id: 8119, name: 'Mystic Phoenix', box: 'AL' },
+	{ id: 8120, name: 'Mystic Garuda', box: 'AL' },
+	{ id: 8121, name: 'Mystic Mermaid', box: 'AL' },
+	{ id: 8122, name: 'Mystic Sprite', box: 'AL' },
+	{ id: 8123, name: 'Mystic Minotaur', box: 'AL' },
+	{ id: 8124, name: 'Red Solar Zord', box: 'AL' },
+	{ id: 8125, name: 'Yellow Solar Zord', box: 'AL' },
+	{ id: 8126, name: 'Blue Solar Zord', box: 'AL' },
+	{ id: 8127, name: 'Green Solar Zord', box: 'AL' },
+	{ id: 8128, name: 'Pink Solar Zord', box: 'AL' },
+	{ id: 8129, name: 'Black Solar Zord', box: 'AL' },
+	{ id: 8130, name: 'Tor The Shuttlezord', box: 'AL' },
+	{ id: 8131, name: 'White Tigerzord Red Tiger Mode', box: 'AL' },
+	{ id: 8132, name: 'Mechazord', box: 'AL' },
+	{ id: 8133, name: 'Cosmic Dragon Zord', box: 'AL' },
+	{ id: 8134, name: 'Omega Blue Zord', box: 'AL' },
+	{ id: 8135, name: 'Storm Blaster', box: 'AL' },
+	{ id: 8136, name: 'Mountain Blaster Turbozord', box: 'AL' },
+	{ id: 8137, name: 'Red Lightning Turbozord', box: 'AL' },
+	{ id: 8138, name: 'Lightning Fire Tamer Rescuezord', box: 'AL' },
+	{ id: 8139, name: 'Siren Blaster Rescuezord', box: 'AL' },
+	{ id: 8140, name: 'White Tiger Dragonzord', box: 'AL' },
 ];
 
 export const masters = [
@@ -404,6 +472,11 @@ export const masters = [
 	{ id: 3021, name: 'Ransik', box: 'Z' },
 	{ id: 3022, name: 'Final Venjix', box: 'AA' },
 	{ id: 3023, name: 'Perfect Evox', box: 'AA' },
+	{ id: 3024, name: 'Death Ranger', box: 'AL' },
+	{ id: 3025, name: 'Master Zedd', box: 'AL' },
+	{ id: 3026, name: 'Final Drakkon', box: 'AL' },
+	{ id: 3027, name: 'Emperor Gruumm', box: 'AL' },
+	{ id: 3028, name: 'Madame Odius', box: 'AL' },
 ];
 
 export const monsters = [
@@ -457,6 +530,11 @@ export const monsters = [
 	{ id: 2048, name: 'Heximas', box: 'AB' },
 	{ id: 2049, name: 'Void Knight', box: 'AH' },
 	{ id: 2050, name: 'Tenaya 7', box: 'AA' },
+	{ id: 2051, name: 'Evil Dino Fury Blue Ranger', box: 'AL' },
+	{ id: 2052, name: 'Vypra', box: 'AL' },
+	{ id: 2053, name: 'Poisandra', box: 'AL' },
+	{ id: 2054, name: 'Zurgane', box: 'AL' },
+	{ id: 2055, name: 'Nadira', box: 'AL', nemesis: true },
 ];
 
 export const arsenal = [
@@ -480,6 +558,26 @@ export const arsenal = [
 	{ id: 4018, name: 'S.W.A.T. Armor', box: 'AH' },
 	{ id: 4019, name: 'Sword of Light', box: 'AH' },
 	{ id: 4020, name: 'Power of the Solarix', box: 'AH' },
+	{ id: 4021, name: 'Stealth Suit', box: 'AL' },
+	{ id: 4022, name: 'Crown of the Coinless', box: 'AL' },
+	{ id: 4023, name: 'Power Stealing Armor', box: 'AL' },
+	{ id: 4024, name: 'S.P.D. Battlizer', box: 'AL' },
+	{ id: 4025, name: 'Triassic Battlizer', box: 'AL' },
+	{ id: 4026, name: 'Radbug', box: 'AL' },
+	{ id: 4027, name: 'Ranger Key', box: 'AL' },
+	{ id: 4028, name: 'Time Jet', box: 'AL' },
+	{ id: 4029, name: 'Raptor Rider', box: 'AL' },
+	{ id: 4030, name: 'Defender Wheel', box: 'AL' },
+	{ id: 4031, name: 'Mirror Shield', box: 'AL' },
+	{ id: 4032, name: 'Cloud Hatchet', box: 'AL' },
+	{ id: 4033, name: 'Zeo Cannon', box: 'AL' },
+	{ id: 4034, name: 'Power Cannon', box: 'AL' },
+	{ id: 4035, name: 'Psycho Dagger', box: 'AL' },
+	{ id: 4036, name: 'Lightspeed Cycle', box: 'AL' },
+	{ id: 4037, name: 'White Light', box: 'AL' },
+	{ id: 4038, name: 'Stolen Sentry Power', box: 'AL' },
+	{ id: 4039, name: 'Spirit of the Masters', box: 'AL' },
+	{ id: 4040, name: 'Academy Power', box: 'AL' },
 ];
 
 export const allBoxIds = boxes.map((box) => box.id);
